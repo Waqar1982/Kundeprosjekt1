@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+.rating {
+    font-size: 40px;
+    color: gray; /* grå stjerne som standart*/
+    cursor: pointer;
+    }
+
+.star:hover{
+    color: gold; /* Når man går over en stjerne */
+}
+ 
+.star.selected{
+    color: gold; /* Når en stjerne er valgt*/
+
+}
