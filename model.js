@@ -1,6 +1,8 @@
 const model = {
 
 app:{
+    currentPage: '',
+
     page: [
         'startPage', 
         'dashboard', 
@@ -47,18 +49,30 @@ inputs: {
 },
 
 data: {
-    users: [{
-        userID: 5,
-        adminUser: false,
-        firstName: '',
-        lastName: '',
-        password: '',
-        email: '',
+    users: [
+        {userID: 1,
+        adminUser: true,
+        firstName: 'Mister',
+        lastName: 'Admin',
+        password: 'admin',
+        email: 'admin@admin.no',
         profilePicture: '',
         dogList: [],
-        info: '',
-        dogRatings: [{id: 1, rating: 4.5}]
-    }],
+        info: 'Admin',
+        dogRatings: [{id: 1, rating: 4.5}]},
+
+        {userID: 5,
+        adminUser: false,
+        firstName: 'Test',
+        lastName: 'User',
+        password: 'test',
+        email: 'dummyuser@gmail.com',
+        profilePicture: '',
+        dogList: [],
+        info: 'Test User. Please Ignore.',
+        dogRatings: [{id: 1, rating: 4.5}]}
+    ],
+
 
     dogs: [
         { id: 1, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 4, pictures: [] },

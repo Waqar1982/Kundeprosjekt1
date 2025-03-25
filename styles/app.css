@@ -1,11 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: arial, sans-serif;
     text-align: center;
     padding-top: 50px;
 }
+
 .rating {
     font-size: 40px;
-    color: gray; /* grå stjerne som standart*/
+    color: #d3d3d3; /* grå stjerne som standard*/
     cursor: pointer;
     }
 
