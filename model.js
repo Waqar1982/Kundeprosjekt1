@@ -1,7 +1,9 @@
+const app = document.getElementById('app')
+
 const model = {
 
 app:{
-    currentPage: '',
+    currentPage: 'startPageView',
 
     page: [
         'startPage', 
