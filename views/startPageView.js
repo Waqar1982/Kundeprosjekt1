@@ -18,8 +18,9 @@ function viewStartPage() {
     <h2>Dagens Hund:</h2>
     </div>
     <input type="text" id="newsBox" placeholder="Nyheter">
+    <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
-
+    </div>
     `
 
 }

@@ -29,6 +29,12 @@ body {
     right: 100px;
 }
 
+#top5Dogs {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
 .rating {
     font-size: 40px;
     cursor: pointer;
