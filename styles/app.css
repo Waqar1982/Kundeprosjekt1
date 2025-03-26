@@ -66,3 +66,9 @@ margin: 20px;
     display: flex;
     flex-wrap: wrap;
 }
+
+img {
+    max-width: 230px;
+    max-height: 250px;
+    padding: 35px;
+}
