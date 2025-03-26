@@ -21,7 +21,6 @@ function viewStartPage() {
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
     </div>
-    123
     `
 
 }
