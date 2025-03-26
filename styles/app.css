@@ -35,6 +35,13 @@ body {
     left: 30px;
 }
 
+#newsBox {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .rating {
     font-size: 40px;
     cursor: pointer;
