@@ -11,6 +11,7 @@ function viewStartPage() {
     <button onclick="ratingSite()">Ratingside</button>
     <h1>Dashboard1</h1>
     <h2>Dagens Hund:</h2>
+   
 
     `
 
