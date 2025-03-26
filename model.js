@@ -84,9 +84,15 @@ data: {
         { id: 5, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 4.5, ratings: 33, pictures: [] },
     ],
 
-    topLists: {
+    topLists: [{
         listID: 1,
-    },
+        name: 'all',
+        topList: [],
+    },{
+        listID: 2,
+        name: 'small',
+        topList: [],
+    },],
 
     nyheter: [],
 

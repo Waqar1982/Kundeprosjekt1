@@ -1,4 +1,4 @@
-function dogPageView() (
+function dogPageView() {
     app.innerHTML = /*HTML*/
     `
     <button onclick="myProfile()"></button>
@@ -11,4 +11,4 @@ function dogPageView() (
     <h1>Rating stars</h1>
     <input id="breed" type="text" placeholder="Her kan du skrive hva du vil">
     `
-)
+}
