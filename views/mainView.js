@@ -4,7 +4,7 @@ mainView ()
 function mainView(){
     app.innerHTML=/*HTML*/`
     <button onclick= "ratingStarsView()">ratingStarsView</button>
-    <button onclick= "dashboardView()">dashboardView</button>
+    <button onclick= "dashboardViewFunction()">dashboardView</button> 
     <button onclick= "dogPageView()">dogPageView</button>
     <button onclick= "dogRatingView()">dogRatingView</button>
     <button onclick= "ownerPagerView()">ownerPagerView</button>
