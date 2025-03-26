@@ -1,6 +1,4 @@
-    function startPageView() {
-    console.log("kjører startPageView")
-   }
+    function viewStartPage() {
     app.innerHTML = /*html*/ `
     <div id="loginBox">
     <input type="text" id="username" placeholder="Brukernavn">
@@ -22,5 +20,6 @@
     <h2>Topp 5 hunder</h2>
     </div>
     `
+}
 return html
 
