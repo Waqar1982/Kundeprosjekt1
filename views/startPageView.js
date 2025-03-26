@@ -1,4 +1,4 @@
-    function viewStartPage() {
+    function startPageView() {
     
     app.innerHTML = /*html*/ `
     <div id="loginBox">
