@@ -1,4 +1,4 @@
-function viewUserProfile() {
+function userProfileView() {
 app.innerHTML = /*html*/ `
 
 <button onclick="topLists()">Flere Topplister</button>

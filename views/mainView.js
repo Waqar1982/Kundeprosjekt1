@@ -7,7 +7,7 @@ function mainView(){
     <button onclick= "dashboardViewFunction()">dashboardView</button> 
     <button onclick= "dogPageView()">dogPageView</button>
     <button onclick= "dogRatingView()">dogRatingView</button>
-    <button onclick= "ownerPagerView()">ownerPagerView</button>
+    <button onclick= "ownerPageView()">ownerPagerView</button>
     <button onclick= "startPageView()">startPageView</button>
     <button onclick= "topListsView()">topListsView</button>
     <button onclick= "userProfileView()">userProfileView</button>

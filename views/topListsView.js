@@ -23,7 +23,7 @@ function fillTopList(type) {
     for(i=1; i<11; i++) {
         list.innerHTML += `
         <div class="dogInList">
-            <img src="dogs/dog${i}.avif">
+            <img src="dogpictures/dog${i}.avif">
         </div>
         ` //Testbilder.
         // Bilder skal komme fra topplister i modellen som kan endres med kode
