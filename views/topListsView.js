@@ -16,6 +16,7 @@ function topListsView() {
     <div id='shiba' class="topList"></div>
     
     `
+    fillTopList('all')
 }
 
 function fillTopList(type) {
@@ -30,4 +31,3 @@ function fillTopList(type) {
         // Bilder og/eller navn lenker til hundenes profil.
     }
 }
-//fillTopList('all') Bilder er ikke i felles-mappen ennå.
