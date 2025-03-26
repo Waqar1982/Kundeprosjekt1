@@ -1,4 +1,4 @@
-function dasboardView() {
+function dashboardView() {
     app.innerHTML = /*HTML*/ `
     <button onclick="topLists()">Flere Topplister</button>
     <input type="text" id="search" placeholder="Søk">
