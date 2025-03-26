@@ -77,12 +77,16 @@ data: {
 
 
     dogs: [
-        { id: 1, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 4, pictures: [] },
-        { id: 2, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 3, pictures: [] },
-        { id: 3, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 3.5, pictures: [] },
-        { id: 4, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 5, pictures: [] },
-        { id: 5, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 4.5, pictures: [] },
+        { id: 1, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 4, ratings: 52, pictures: [] },
+        { id: 2, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 3, ratings: 34, pictures: [] },
+        { id: 3, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 3.5, ratings: 41, pictures: [] },
+        { id: 4, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 5, ratings: 28, pictures: [] },
+        { id: 5, rase: '', alder: '', størrelseVekt: '', favorittmat: '', rating: 4.5, ratings: 33, pictures: [] },
     ],
+
+    topLists: {
+        listID: 1,
+    },
 
     nyheter: [],
 

@@ -6,15 +6,20 @@ body {
 
 .rating {
     font-size: 40px;
-    color: #d3d3d3; /* grå stjerne som standard*/
     cursor: pointer;
     }
 
-.star:hover{
-    color: gold; /* Når man går over en stjerne */
-}
- 
-.star.selected{
-    color: gold; /* Når en stjerne er valgt*/
+ .star{
+    color:lightgrey;
+    transform: color 0.2s;
+ }   
 
+.star:hover,
+.star.selected {
+    color: gold;
+}
+
+p {
+font-size: 20px;
+margin: 20px;
 }

@@ -11,7 +11,8 @@ function viewStartPage() {
     <button onclick="ratingSite()">Ratingside</button>
     <h1>Dashboard1</h1>
     <h2>Dagens Hund:</h2>
-   
+    <input type="text" id="newsBox" placeholder="Nyheter">
+    <h1>Topp 5 hunder</h1>
 
     `
 
