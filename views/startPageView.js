@@ -1,6 +1,10 @@
-    function startPageView() {
-    
+
+
+function startPageView() {
     app.innerHTML = /*html*/ `
+
+    
+    
     <div id="loginBox">
     <input type="text" id="username" placeholder="Brukernavn">
     <input type="text" id="password" placeholder="Passord">
@@ -21,5 +25,7 @@
     <h2>Topp 5 hunder</h2>
     </div>
     `
+
 }
+
 
