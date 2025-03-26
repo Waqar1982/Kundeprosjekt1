@@ -1,4 +1,4 @@
-function viewDogRating() {
+function dogRatingView() {
     app.innerHTML = /*html*/ `
 
     <button onclick="topLists()">Flere Topplister</button>

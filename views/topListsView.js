@@ -1,4 +1,4 @@
-function viewTopLists() {
+function topListsView() {
     app.innerHTML = /*html*/ `
     <h1>Topp 10 Hunder</h1>
     <div id='all' class="topList"></div>
