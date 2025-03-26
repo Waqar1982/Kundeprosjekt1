@@ -1,4 +1,5 @@
     function viewStartPage() {
+    
     app.innerHTML = /*html*/ `
     <div id="loginBox">
     <input type="text" id="username" placeholder="Brukernavn">
@@ -21,5 +22,4 @@
     </div>
     `
 }
-return html
 
