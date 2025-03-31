@@ -1,9 +1,11 @@
-
-
 function startPageView() {
     app.innerHTML = /*html*/ `
 
-    
+    <img src="dogpictures/dog1.avif" alt="Hundebilde" style="position: absolute; top: 120px; left: 10px; height: 150px;">
+    <img src="dogpictures/dog2.avif" alt="Hundebilde" style="position: absolute; top: 300px; left: 10px; height: 150px;">
+    <img src="dogpictures/dog3.avif" alt="Hundebilde" style="position: absolute; top: 480px; left: 10px; height: 150px;">
+    <img src="dogpictures/dog4.avif" alt="Hundebilde" style="position: absolute; top: 660px; left: 10px; height: 150px;">
+    <img src="dogpictures/dog5.avif" alt="Hundebilde" style="position: absolute; top: 840px; left: 10px; height: 150px;">
     
     <div id="loginBox">
     <input type="text" id="username" placeholder="Brukernavn">
@@ -25,7 +27,4 @@ function startPageView() {
     <h2>Topp 5 hunder</h2>
     </div>
     `
-
 }
-
-
