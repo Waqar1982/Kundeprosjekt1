@@ -79,6 +79,7 @@ data: {
     dogs: [ //Kan starte med ett bilde
         { id: 1, name: 'testnavn1', race: '', age: '', size: '', favorittmat: '', rating: 0, ratings: 52, pictures: [] },
         { id: 2, name: 'testnavn2', race: '', age: '', size: '', favorittmat: '', rating: 3, ratings: 34, picture: 'dogpictures/dog2.avif' },
+>>>>>>> 67812c64c531914aee60a57dd3689e09b53a8e6c
         { id: 3, name: 'testnavn3', race: '', age: '', size: '', favorittmat: '', rating: 3.5, ratings: 41, picture: 'dogpictures/dog3.avif' },
         { id: 4, name: 'testnavn4', race: '', age: '', size: '', favorittmat: '', rating: 5, ratings: 28, picture: 'dogpictures/dog4.avif' },
         { id: 5, name: 'testnavn5', race: '', age: '', size: '', favorittmat: '', rating: 4.5, ratings: 33, picture: 'dogpictures/dog5.avif' },
