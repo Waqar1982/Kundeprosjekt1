@@ -38,9 +38,13 @@ function startPageView() {
     </div>
     <h1>StartPage</h1>
     <div id="todaysDog">
-    <h2>Dagens Hund:</h2>
+    <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
+    <img src="dogpictures/dog1.avif" alt="Dagens Hund" style="display: block; margin: 10px auto 0; height: 450px; width: 450px;">
+    <div class="stars" style="color: gold; text-align: center; margin-top: 10px;">
+    ${'★'.repeat(5)}
+        </div>
     </div>
-    <input type="text" id="newsBox" placeholder="Nyheter">
+    <input type="text" id="newsBox" placeholder="Nyheter!">
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
     </div>

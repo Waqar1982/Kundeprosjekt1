@@ -38,15 +38,5 @@ return html
 }
 function changeStarRating (chosenId){
     
-    for (let i = 0; i < maxStars; i++) {
-        if (i < ratingNumber) {
-            html += /*HTML*/ `
-            <span onclick="changeStarRating(${id})" class="star gold" data-value="${i + 1}">&#9733;</span>
-            `;
-        } else {
-            html += /*HTML*/ `
-            <span onclick="changeStarRating(${id})" class="star" data-value="${i + 1}">&#9733;</span>
-            `;
-        }
-    }
+    
 }
