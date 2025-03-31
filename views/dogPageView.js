@@ -1,6 +1,6 @@
 function dogPageView() {
-    app.innerHTML = /*HTML*/
-    `
+    app.innerHTML = /*HTML*/ `
+    <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
     <button onclick="myProfile()">Min profil</button>
     <img src="dogpictures/dog13.avif" alt="Aikos profil bilde" style="width: 100px; height: 100px;">
     <input id="breed" type="text" placeholder="Rase">

@@ -1,7 +1,8 @@
 function userProfileView() {
 app.innerHTML = /*html*/ `
+<button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
 
-<button onclick="topLists()">Flere Topplister</button>
+<button onclick="topListsView()">Flere Topplister</button>
 <input type="text" id="search" placeholder="Søk">
 <button onclick="ratingSite()">Ratingside</button>
 <h1>Profil<h1>
