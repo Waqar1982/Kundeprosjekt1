@@ -72,3 +72,10 @@ img {
     max-height: 250px;
     padding: 35px;
 }
+.printStars:checked + star ~ star {
+    color: #838383;
+}
+.printStars:active{
+    transform: scale(0.8);
+    transform: 0.3s ease;
+}
