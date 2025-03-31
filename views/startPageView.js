@@ -39,7 +39,7 @@ function startPageView() {
     <h1>StartPage</h1>
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
-    <img src="dogpictures/dog1.avif" alt="Dagens Hund" style="display: block; margin: 10px auto 0; height: 450px; width: 450px;">
+    <img src="dogpictures/dog1.avif" alt="Dagens Hund">
     <div class="stars" style="color: gold; text-align: center; margin-top: 10px;">
     ${'★'.repeat(5)}
         </div>
