@@ -4,7 +4,7 @@ app.innerHTML = /*HTML*/`
 
 
 <div class="rating">
-${printStars(2,model.data.dogs[0].id)}
+${printStars(model.data.dogs[10].id)}
 
 </div>
 
@@ -12,7 +12,8 @@ ${printStars(2,model.data.dogs[0].id)}
 `
 }
 
-function printStars (ratingNumber,id) {
+function printStars (id) {
+let ratingNumber = model.data.dogs.find((element)=>element.id==id).rating
 let maxStars = 5
 let html = ''
 
@@ -21,22 +22,29 @@ if(i<ratingNumber){
     console.log (i<ratingNumber)
     html+= /*HTML*/`
     <span onclick="changeStarRating(id)" class="star gold" data-value="1">&#9733</span>
- 
-    
+
     `
 } else {
     console.log('kjøre')
     html+= /*HTML*/`
     <span onclick="changeStarRating(id)" class="star" data-value="1">&#9733</span>
-    
-    
-    `
+
+     `
 }
 }
 return html
 }
 function changeStarRating (chosenId){
-
-
-
+    
+    for (let i = 0; i < maxStars; i++) {
+        if (i < ratingNumber) {
+            html += /*HTML*/ `
+            <span onclick="changeStarRating(${id})" class="star gold" data-value="${i + 1}">&#9733;</span>
+            `;
+        } else {
+            html += /*HTML*/ `
+            <span onclick="changeStarRating(${id})" class="star" data-value="${i + 1}">&#9733;</span>
+            `;
+        }
+    }
 }
