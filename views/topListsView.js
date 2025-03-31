@@ -40,9 +40,11 @@ function fillTopList(type) {
     for(i=1; i<6; i++) {
         dogID = model.data.topLists[type][i-1]
         pic = model.data.dogs[dogID-1].picture
+        dogName = model.data.dogs[dogID-1].name
         list.innerHTML += `
         <div class="dogInList">
-            <img src=${pic}>
+            ${dogName} <br>
+            <img src=${pic} onclick="dogPageView()">
         </div>
         `
     }

@@ -2,6 +2,8 @@ function ratingStarsView() {
     console.log("kjører ratingStarsView")
 app.innerHTML = /*HTML*/`
 
+<button onclick= "mainView()">Tilbake til Main View</button>
+
 
 <div class="rating">
 ${printStars(model.data.dogs[10].id)}
