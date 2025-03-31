@@ -3,14 +3,14 @@
 mainView ()
 function mainView(){
     app.innerHTML=/*HTML*/`
-    <button onclick= "ratingStarsView()">ratingStarsView</button>
-    <button onclick= "dashboardViewFunction()">dashboardView</button> 
-    <button onclick= "dogPageView()">dogPageView</button>
-    <button onclick= "dogRatingView()">dogRatingView</button>
-    <button onclick= "ownerPageView()">ownerPagerView</button>
-    <button onclick= "startPageView()">startPageView</button>
-    <button onclick= "topListsView()">topListsView</button>
-    <button onclick= "userProfileView()">userProfileView</button>
+    <button onclick= "ratingStarsView()">RatingStarsView</button>
+    <button onclick= "dashboardViewFunction()">DashboardView</button> 
+    <button onclick= "dogPageView()">DogPageView</button>
+    <button onclick= "dogRatingView()">DogRatingView</button>
+    <button onclick= "ownerPageView()">OwnerPagerView</button>
+    <button onclick= "startPageView()">StartPageView</button>
+    <button onclick= "topListsView()">TopListsView</button>
+    <button onclick= "userProfileView()">UserProfileView</button>
   `
   
 }
