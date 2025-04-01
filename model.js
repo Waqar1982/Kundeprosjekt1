@@ -12,7 +12,8 @@ app:{
         'profil',
         'ownerPage',
         'dogPage',
-        'topLists']
+        'topLists',
+        'search']
 
 
 },

@@ -11,6 +11,7 @@ function mainView(){
     <button onclick= "startPageView()">StartPageView</button>
     <button onclick= "topListsView()">TopListsView</button>
     <button onclick= "userProfileView()">UserProfileView</button>
+    <button onclick= "searchView()">searchView</button>
   `
   
 }
