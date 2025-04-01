@@ -1,5 +1,5 @@
 // Initialiserer hundelisten hvis den ikke finnes fra før
-let dogs = JSON.parse(localStorage.getItem('dos')) || [];
+let dogs = JSON.parse(localStorage.getItem('dogs')) || [];
 
 // Lagrer og henter bio fra localStorage
 function saveBio() {
@@ -25,6 +25,7 @@ function loadDogs() {
 
 // Viser skjemaet for å legge til ny hund
 function showAddDogForm() {
+    if (!document.getElementById('addDogForm')) {
     const formHtml = `
     <div id="addDogForm" style="position: fixed; top: 20%; left: 30%; background: white; padding: 20px; border-radius: 10px;">
     <h2>Legg til en ny hund</h2>
@@ -35,12 +36,15 @@ function showAddDogForm() {
     </div>
     `;
     document.body.insertAdjacentElement('beforeend', formHtml);
+} else {
+    document.getElementById('addDogForm').style.display = 'block';
+}
 }
 
-// Lukk skjemaet for å legge til ny hund
+// Skjuler skjemaet for å legge til ny hund
 function closeAddDogForm() {
     const form = document.getElementById('addDogForm');
-    if (form) form.remove();
+    if (form) form.style.display = 'none';
 }
 
 // Legger til en ny hund og oppdaterer visningen
@@ -58,6 +62,12 @@ function addDog() {
     }
 }
 
+// Slette hund
+function deleteDog(name) {
+    dogs = dogs.filter(dog => dog.name !== name);
+    saveDogs();
+    ownerPageView();
+}
 // Viser detaljer for en bestemt hund
 function viewDog(name) {
     const dog = dogs.find(d => d.name === name);
