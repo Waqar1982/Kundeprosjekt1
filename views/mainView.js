@@ -12,6 +12,7 @@ function mainView(){
     <button onclick= "topListsView()">TopListsView</button>
     <button onclick= "userProfileView()">UserProfileView</button>
     <button onclick= "searchView()">searchView</button>
+    <button onclick= "createAccountView()">CreateAccountView</button>
   `
   
 }

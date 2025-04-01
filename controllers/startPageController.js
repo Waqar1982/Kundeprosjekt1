@@ -43,7 +43,7 @@ function validatePassword(username, password) {
 }
 
 function createAccount() {
-
+    createAccountView();
 }
 
 function ratingSite() {
