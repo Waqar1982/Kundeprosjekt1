@@ -80,3 +80,12 @@ img {
 
     color: gold;
 }
+
+.column1 {
+    display: inline-block;
+    vertical-align: middle; /* or top or bottom */
+}
+.column2 {
+    display: inline-block;
+    vertical-align: middle; /* or top or bottom */
+}
