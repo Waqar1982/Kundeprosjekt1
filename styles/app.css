@@ -40,7 +40,8 @@ body {
     position: absolute;
     top: 400px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
+    cursor: pointer;
 }
 
 .rating {
