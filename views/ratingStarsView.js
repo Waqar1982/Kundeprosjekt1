@@ -39,11 +39,13 @@ return html
 }
 function changeStarRating (chosenId,starIndex,){
  console.log(chosenId,starIndex)
+
  for(let i=0;i<model.data.dogs.length; i++){
-if(model.data.dogs[i].id===chosenId&&starIndex==0){
-  model.data.dogs[i].rating=0}
-  else if(model.data.dogs[i].id===chosenId&&starIndex!=0){
-    model.data.dogs[i].rating=starIndex +1
+        if(model.data.dogs[i].id===chosenId&&starIndex==0){
+     model.data.dogs[i].rating=0}
+        else if(model.data.dogs[i].id===chosenId&&starIndex!=0){
+     model.data.dogs[i].rating=starIndex +1
+     
   }
    
  
