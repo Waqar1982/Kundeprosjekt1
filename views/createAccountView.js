@@ -1,4 +1,3 @@
-<h1>Opprett Bruker</h1>
 function createAccountView() {
     app.innerHTML = /*HTML*/ `
         <style>
