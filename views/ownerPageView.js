@@ -1,7 +1,7 @@
 function ownerPageView() {
   loadBio(); // Laste inn bio fra loclStorage
   loadDogs(); // Laste inn eksisterende hunder fra localStorage
-  
+
   app.innerHTML = /*html*/ `
     <div style="position: relative; text-align: center; font-family: Helvetica, sans-serif; padding: 20px;">
 
@@ -34,9 +34,13 @@ function ownerPageView() {
       <textarea id="bioOwner" placeholder="Skriv litt om deg selv" rows="3" style="width: 80%; padding: 10px;"></textarea>
     </div>
 
-  
-  <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
-
+          <!-- Legg til ny hund -->
+          <button onclick="showAddDogForm()" style="padding: 10px; margin-top: 10px;">Legg til en ny hund</button>
+          
+          <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
+            ${dogs.map(dog => `
+              <div style="display: flex; justify-content: space-around; flex-wrap">
+              `)}
     <!-- LUNA -->
     <div style="text-align: center; margin-bottom: 20px; position: relative;">
         <!-- Knappen over bildet -->
