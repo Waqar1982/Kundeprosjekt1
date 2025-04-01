@@ -12,6 +12,7 @@ ${printStarsDisplay(model.data.dogs[1].id)}
 
 
 
+
 `
 }
 
