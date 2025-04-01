@@ -31,19 +31,29 @@ function ownerPageView() {
       <textarea id="bioOwner" placeholder="Skriv litt om deg selv" rows="3" style="width: 80%; padding: 10px;"></textarea>
     </div>
 
-
+  
   <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
-    <div style="text-align: center; margin-bottom: 20px;">
-      <button onclick="dogLuna()" style="margin-bottom: 10px; padding: 10px;">Luna</button> <br>
-    <img src="dogpictures/dog4.avif" style="width: 200px; border-radius: 10px;">
+
+    <!-- LUNA -->
+    <div style="text-align: center; margin-bottom: 20px; position: relative;">
+        <!-- Knappen over bildet -->
+        <div>
+          <button onclick="dogLuna()" style="padding: 5px; 10px; margin-bottom: 5px;">Luna</button>
+        </div>
+            <!-- Bildet -->
+            <img src="dogpictures/dog4.avif" style="width: 200px; border-radius: 10px;">
     </div>
 
-
-    <div style="text-align: center; margin-bottom: 20px;">
-      <button onclick="dogAiko()" style="margin-bottom: 10px; padding: 10px;">Aiko</button>
+      <!-- AIKO -->
+    <div style="text-align: center; margin-bottom: 20px; position: relative;">
+        <!-- Knappen over bildet -->
+        <div>
+          <button onclick="dogAiko()" style="padding: 5px 10px; margin-bottom: 5px;">Aiko</button>
+      </div>
+        <!-- Bildet -->
       <img src="dogpictures/dog3.avif" style="width: 200px; border-radius: 10px;">
         </div>
-      </div>
+    
     </div>  
   `  
 }
