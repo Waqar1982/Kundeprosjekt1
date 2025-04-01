@@ -64,9 +64,12 @@ function addDog() {
 
 // Slette hund
 function deleteDog(name) {
+    const confirmation = confirm(`Er du sikker på at du vil slette ${name}?`);
+    if (confirmation) {
     dogs = dogs.filter(dog => dog.name !== name);
     saveDogs();
     ownerPageView();
+}
 }
 // Viser detaljer for en bestemt hund
 function viewDog(name) {

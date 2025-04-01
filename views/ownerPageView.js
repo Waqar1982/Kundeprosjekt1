@@ -64,7 +64,7 @@ function ownerPageView() {
             
             <div style="text-align: center; margin-bottom: 20px;">
               <button onclick="viewDog('Luna')" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
-              Luna
+              Aiko
           </button>
               <br>
               <img src="dogpictures/dog4.avif" style="width: 200px; border-radius: 10px;">
@@ -72,7 +72,7 @@ function ownerPageView() {
 
         <div style="text-align: center; margin-bottom: 20px;">
         <br>
-        <button onclick="viewDog('Aiko')" style="padding: 5px 10px; margin-bottom: 5px;">Aiko</button>
+        <button onclick="viewDog('Aiko')" style="padding: 5px 10px; margin-bottom: 5px;">Luna</button>
         <br>
         <img src="dogpictures/dog3.avif" style="width: 200px; border-radius: 10px;">
         </div>
