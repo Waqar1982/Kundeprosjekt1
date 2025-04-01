@@ -11,7 +11,7 @@ function ownerPageView() {
         <!-- KNAPPENE -->
         <div style="display: flex; gap: 15px; margin-top: -120px; margin-left: -40px;"> <!-- Økt gap mellom knappene -->
           <button onclick= "mainView()" style="padding: 1px 3px; font-size: 12px;">Tilbake til Main View</button>
-          <button onclick="topListsView()" style="ppadding: 1px 3px; font-size: 12px;">Flere Topplister</button>
+          <button onclick="topListsView()" style="padding: 1px 3px; font-size: 12px;">Flere Topplister</button>
           <button onclick="ratingSite()" style="padding: 1px 3px; font-size: 12px;">Ratingside</button>
       </div>
 
@@ -37,6 +37,15 @@ function ownerPageView() {
           <!-- Legg til ny hund -->
           <button onclick="showAddDogForm()" style="padding: 10px; margin-top: 10px;">Legg til en ny hund</button>
           
+                <!-- Skjema for å legge til ny hund (skjult som standard) -->
+                <div id="addDogForm" style="display: none; background: white; padding 20px; border-radius: 10px; margin-top: 20px;">
+                <h2>Legg til en ny hund</h2>
+                <input type="text" id="newDogName" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
+                <input type="text" id="newDogImage" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
+                <button onclick="addDog()" style="padding: 5px 10px;">Legg til</button>
+                <button onclick="closeAddDogForm()" style="padding: 5px 10px; margin-left: 10px;">Avbryt</button>
+              </div>
+
           <!-- Viser lagrede hunder -->
           <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
             ${dogs.map(dog => `
@@ -44,12 +53,17 @@ function ownerPageView() {
               <button onclick="viewDog('${dog.name}')" style="padding: 5px 10px; margin-bottom: 5px;">${dog.name}</button>
               <br>
               <img src="${dog.imageURL}" style="width: 200px; border-radius: 10px;">
-              </div>
+              <br>
+              <button onclick="deleteDog('${dog.name}')" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
+              <div>
               `).join('')}
+              </div>
 
             <!-- Hardkodede hunder Luna og Aiko -->
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
+            
             <div style="text-align: center; margin-bottom: 20px;">
-            <button onclick="viewDog('Luna')" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
+              <button onclick="viewDog('Luna')" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
               Luna
           </button>
               <br>
@@ -62,6 +76,7 @@ function ownerPageView() {
         <br>
         <img src="dogpictures/dog3.avif" style="width: 200px; border-radius: 10px;">
         </div>
+
         </div>
     </div>  
   `;
