@@ -37,30 +37,32 @@ function ownerPageView() {
           <!-- Legg til ny hund -->
           <button onclick="showAddDogForm()" style="padding: 10px; margin-top: 10px;">Legg til en ny hund</button>
           
+          <!-- Viser lagrede hunder -->
           <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
             ${dogs.map(dog => `
-              <div style="display: flex; justify-content: space-around; flex-wrap">
-              `)}
-    <!-- LUNA -->
-    <div style="text-align: center; margin-bottom: 20px; position: relative;">
-        <!-- Knappen over bildet -->
-        <div>
-          <button onclick="dogLuna()" style="padding: 5px; 10px; margin-bottom: 5px;">Luna</button>
-        </div>
-            <!-- Bildet -->
-            <img src="dogpictures/dog4.avif" style="width: 200px; border-radius: 10px;">
-    </div>
+              <div style="text-align: center; margin-bottom: 20px;">
+              <button onclick="viewDog('${dog.name}')" style="padding: 5px 10px; margin-bottom: 5px;">${dog.name}</button>
+              <br>
+              <img src="${dog.imageURL}" style="width: 200px; border-radius: 10px;">
+              </div>
+              `).join('')}
 
-      <!-- AIKO -->
-    <div style="text-align: center; margin-bottom: 20px; position: relative;">
-        <!-- Knappen over bildet -->
-        <div>
-          <button onclick="dogAiko()" style="padding: 5px 10px; margin-bottom: 5px;">Aiko</button>
-      </div>
-        <!-- Bildet -->
-      <img src="dogpictures/dog3.avif" style="width: 200px; border-radius: 10px;">
+            <!-- Hardkodede hunder Luna og Aiko -->
+            <div style="text-align: center; margin-bottom: 20px;">
+            <button onclick="viewDog('Luna')" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
+              Luna
+          </button>
+              <br>
+              <img src="dogpictures/dog4.avif" style="width: 200px; border-radius: 10px;">
+            </div>
+
+        <div style="text-align: center; margin-bottom: 20px;">
+        <br>
+        <button onclick="viewDog('Aiko')" style="padding: 5px 10px; margin-bottom: 5px;">Aiko</button>
+        <br>
+        <img src="dogpictures/dog3.avif" style="width: 200px; border-radius: 10px;">
         </div>
-    
+        </div>
     </div>  
-  `  
+  `;
 }
