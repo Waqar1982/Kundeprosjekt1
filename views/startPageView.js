@@ -35,6 +35,7 @@ function startPageView() {
     <button onclick="topLists()">Flere Topplister</button>
     <input type="text" id="search" placeholder="Søk">
     <button onclick="ratingSite()">Ratingside</button>
+    <button onclick= "mainView()">Tilbake til Main View</button>
     </div>
     <h1>StartPage</h1>
     <div id="todaysDog">
