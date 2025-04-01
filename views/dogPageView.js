@@ -5,12 +5,19 @@ function dogPageView() {   //ta inn input her senere
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
     <button onclick="ownerPageView()">Eiers profil</button> <br>
     <h2>${dog.name}   ---- WIP ---- CSS kommer senere</h2>
-    <img src=${dog.picture} alt="Aikos profil bilde" style="width: 200px; height: 200px;">
-    <div id='race'>Rase: ${dog.race}</div>
-    <div id='age'>Alder: ${dog.age}</div>
-    <div id='Size'>Størrelse: ${dog.size}</div>
-    <div id='Favourites'>Favorittmat: ${dog.favoriteFood}</div>
-    <div id='description'>Liker å kose</div> <br>
+    <div class='row'>
+        <div class='column1'>
+            <img src=${dog.picture} alt="Aikos profil bilde" style="width: 400px; height: 400px;">
+        </div>
+        <div class='column2'>
+            <br>
+            <div id='race'>Rase: ${dog.race}</div>
+            <div id='age'>Alder: ${dog.age}</div>
+            <div id='Size'>Størrelse: ${dog.size}</div>
+            <div id='Favourites'>Favorittmat: ${dog.favoriteFood}</div>
+            <div id='description'>Liker å kose</div> <br>
+        </div>
+    </div>
     <input id="breed" type="text" placeholder="Rase">
     <input id="breed" type="text" placeholder="Alder">    
     <input id="breed" type="text" placeholder="Størrelse/Vekt">    
