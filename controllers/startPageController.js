@@ -2,8 +2,12 @@ function logIn() {
     const username = document.getElementById('username');
     const password = document.getElementById('password');
 
-    username.classList.remove('input-error');
+
     password.classList.remove('input-error');
+    username.classList.remove('input-error');
+ 
+    
+    console.log (password)
 
     if (!validateEmail(username.value)) {
         username.classList.add('input-error'); // Legg til rød kant på brukernavn
