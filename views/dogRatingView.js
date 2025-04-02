@@ -1,5 +1,6 @@
 function dogRatingView() {
     app.innerHTML = /*html*/ `
+    
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
 
     <button onclick="topListsView()">Flere Topplister</button>

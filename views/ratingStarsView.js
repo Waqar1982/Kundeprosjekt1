@@ -11,8 +11,6 @@ ${printStarsDisplay(model.data.dogs[0].id)}
 ${printStarsDisplay(model.data.dogs[1].id)}
 
 
-
-
 `
 }
 
