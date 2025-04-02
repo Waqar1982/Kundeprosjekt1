@@ -15,6 +15,8 @@ function ownerPageView() {
           <button onclick="ratingSite()" style="padding: 1px 3px; font-size: 12px;">Ratingside</button>
       </div>
 
+      
+
         <!-- SØKEFELTET -->
         <input type="text" id="search" placeholder="Søk" style="padding: 5px; width: 250px; margin-top: -110px; margin-right: -40px;">
        </div>
@@ -54,8 +56,11 @@ function ownerPageView() {
               <br>
               <img src="${dog.imageURL}" style="width: 200px; border-radius: 10px;">
               <br>
-              <button onclick="deleteDog('${dog.name}')" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
-              <div>
+              <button onclick="askDeleteDog('${dog.name}')" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
+             <button id="confirm-delete-${dog.name}" onclick="deleteDog('${dog.name}')" style="display: none; padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-top: 5px;">Bekreft slett</button>
+             <button id="cancel-delete-${dog.name}" onclick="cancelDeleteDog('${dog.name}')" style="display: none; padding: 5px 10px; background-color: gray; color: white; border: none; border-radius: 5px; margin-top: 5px;">Avbryt</button>
+ 
+              </div>
               `).join('')}
               </div>
 
@@ -80,4 +85,23 @@ function ownerPageView() {
         </div>
     </div>  
   `;
+
+  dogs.forEach(dog => {
+    const confirmBtn = document.getElementById(`confirm-delete-${dog.name}`);
+    const cancelBtn = document.getElementById(`cancel-delete-${dog.name}`);
+    const dogDiv = document.getElementById(`dog-${dog.name}`);
+    
+    if (confirmBtn) confirmBtn.style.display = 'none'; // Skjuler bekreft-slett-knappen
+    if (cancelBtn) cancelBtn.style.display = 'none';  // Skjuler avbryt-slett-knappen
+    if (dogDiv) dogDiv.style.border = 'none'; // Fjern eventuell rød kant
+  });
 }
+function loadBio() {
+  const savedBio = localStorage.getItem('bio');
+  if (savedBio) {
+    document.getElementById('bioOwner').value = savedBio;
+  }
+}
+
+
+

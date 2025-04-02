@@ -84,11 +84,44 @@ function addDog() {
     }
 }
 
+// Når slett-knappen trykkes, vis bekreftelse-knappen
+function askDeleteDog(name) {
+    document.getElementById(`confirm-delete-${name}`).style.display = 'inline-block';
+    document.getElementById(`cancel-delete-${name}`).style.display = 'inline-block';
+    document.getElementById(`dog-${name}`).style.border = '2px solid red'; // Marker hunden med rød kant
+    const deleteButton = document.querySelector(`#dog-${name} button`);
+    if (deleteButton) {
+        deleteButton.style.display = 'none'; // Skjuler slett-knappen
+    }
+}
+
+// Kanseller slettingen
+function cancelDeleteDog(name) {
+    document.getElementById(`confirm-delete-${name}`).style.display = 'none'; // Skjul Bekreft slett
+    document.getElementById(`cancel-delete-${name}`).style.display = 'none'; // Skjul Avbryt
+    document.getElementById(`dog-${name}`).style.border = 'none'; // Fjern rød kant
+    const deleteButton = document.querySelector(`#dog-${name} button`); // Finner slett-knappen
+    if (deleteButton) {
+        deleteButton.style.display = 'inline-block'; // Vis Slett-knappen igjen
+    }
+}
+
+
     // Slette hund med oppdatering av visning
     function deleteDog(name) {
-    dogs = dogs.filter(dog => dog.name !== name);
-    saveDogs();
-    ownerPageView();
+    const index = dogs.findIndex(dog => dog.name === name);
+    const dogListElement = document.getElementById(`dog-${name}`);
+
+    if (index !== -1) {
+        dogs.splice(index, 1); // Fjern hunden fra arrayet
+        saveDogs(); // Lagre endringene
+        ownerPageView();
+    } else {
+     // Hvis hunden ikke finnes, marker elementet rødt
+        if (dogListElement) {
+            dogListElement.style.border = '2px solid red';
+        }
+    }
 }
 
 // Viser detaljer for en bestemt hund
