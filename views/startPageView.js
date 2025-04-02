@@ -9,22 +9,22 @@ function startPageView() {
     
     <img src="dogpictures/dog2.avif" alt="Hundebilde" style="position: absolute; top: 300px; left: 10px; height: 150px;">
     <div class="stars" style="position: absolute; top: 485px; left: 60px; color: gold;">
-        ${'★'.repeat(4)}${'☆'.repeat(5 - 4)}
+    ${printStars(model.data.dogs[0].id)}
     </div>
 
     <img src="dogpictures/dog3.avif" alt="Hundebilde" style="position: absolute; top: 480px; left: 10px; height: 150px;">
     <div class="stars" style="position: absolute; top: 665px; left: 60px; color: gold;">
-        ${'★'.repeat(3)}${'☆'.repeat(5 - 3)}
+    ${printStars(model.data.dogs[0].id)}
     </div>
 
     <img src="dogpictures/dog4.avif" alt="Hundebilde" style="position: absolute; top: 660px; left: 10px; height: 150px;">
     <div class="stars" style="position: absolute; top: 845px; left: 60px; color: gold;">
-        ${'★'.repeat(2)}${'☆'.repeat(5 - 2)}
+    ${printStars(model.data.dogs[0].id)}
     </div>
 
     <img src="dogpictures/dog5.avif" alt="Hundebilde" style="position: absolute; top: 840px; left: 10px; height: 150px;">
     <div class="stars" style="position: absolute; top: 1025px; left: 60px; color: gold;">
-        ${'★'.repeat(1)}${'☆'.repeat(5 - 1)}
+    ${printStars(model.data.dogs[0].id)}
     </div>
 
     <div id="loginBox">
