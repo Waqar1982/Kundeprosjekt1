@@ -56,7 +56,7 @@ function ownerPageView() {
               <br>
               <img src="${dog.imageURL}" style="width: 200px; border-radius: 10px;">
               <br>
-              <button onclick="askDeleteDog('${dog.name}')" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
+              <button id="delete-${dog.name}" onclick="askDeleteDog('${dog.name}')" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
              <button id="confirm-delete-${dog.name}" onclick="deleteDog('${dog.name}')" style="display: none; padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-top: 5px;">Bekreft slett</button>
              <button id="cancel-delete-${dog.name}" onclick="cancelDeleteDog('${dog.name}')" style="display: none; padding: 5px 10px; background-color: gray; color: white; border: none; border-radius: 5px; margin-top: 5px;">Avbryt</button>
  
