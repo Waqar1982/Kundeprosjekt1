@@ -1,5 +1,8 @@
-function dogPageView() {   //ta inn input her senere
+function dogPageView(idInput) {   //ta inn input her senere
     dogID = 3
+    if(idInput) {
+        dogID = idInput
+    }
     dog = model.data.dogs[dogID-1]
     app.innerHTML = /*HTML*/ `
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>

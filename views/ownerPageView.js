@@ -40,8 +40,8 @@ function ownerPageView() {
                 <!-- Skjema for å legge til ny hund (skjult som standard) -->
                 <div id="addDogForm" style="display: none; background: white; padding 20px; border-radius: 10px; margin-top: 20px;">
                 <h2>Legg til en ny hund</h2>
-                <input type="text" id="newDogName" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
-                <input type="text" id="newDogImage" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
+                <input type="text" id="newDogName" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px; ${invalidName ? 'border: 2px solid red;' : ''}"> <!-- Feilmelding ved tomt felt for navn -->
+                <input type="text" id="newDogImage" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px; ${invalidImage ? 'border: 2px solid red;' : ''}"> <!-- Feilmelding ved tomt bilde-URL-felt -->
                 <button onclick="addDog()" style="padding: 5px 10px;">Legg til</button>
                 <button onclick="closeAddDogForm()" style="padding: 5px 10px; margin-left: 10px;">Avbryt</button>
               </div>
@@ -63,7 +63,7 @@ function ownerPageView() {
             <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
             
             <div id="dog-Luna" style="text-align: center; margin-bottom: 20px;">
-              <button onclick="viewDog('Luna')" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
+              <button onclick="dogPageView(4)" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
               Aiko
           </button>
               <br>
@@ -72,7 +72,7 @@ function ownerPageView() {
 
         <div id="dog-Aiko" style="text-align: center; margin-bottom: 20px;">
         <br>
-        <button onclick="viewDog('Aiko')" style="padding: 5px 10px; margin-bottom: 5px;">Luna</button>
+        <button onclick="dogPageView(3)" style="padding: 5px 10px; margin-bottom: 5px;">Luna</button>
         <br>
         <img src="dogpictures/dog3.avif" style="width: 200px; border-radius: 10px;">
         </div>

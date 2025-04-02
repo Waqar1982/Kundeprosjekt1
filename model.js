@@ -80,8 +80,8 @@ data: {
     dogs: [ //Kan starte med ett bilde
         { id: 1, name: 'testnavn1', race: '', age: '', size: '', favoriteFood: '', rating: 0, ratings: 52, pictures: [] },
         { id: 2, name: 'testnavn2', race: '', age: '', size: '', favoriteFood: '', rating: 3, ratings: 34, picture: 'dogpictures/dog2.avif' },
-        { id: 3, name: 'testnavn3', race: 'Mops', age: '5', size: 'Liten', favoriteFood: 'Pølse', rating: 3.5, ratings: 41, picture: 'dogpictures/dog3.avif' },
-        { id: 4, name: 'testnavn4', race: '', age: '', size: '', favoriteFood: '', rating: 5, ratings: 28, picture: 'dogpictures/dog4.avif' },
+        { id: 3, name: 'testnavn3', race: 'Mops', age: '4', size: 'Liten', favoriteFood: 'Pølse', rating: 3.5, ratings: 41, picture: 'dogpictures/dog3.avif' },
+        { id: 4, name: 'Aiko', race: 'Sibirsk Husky', age: '6', size: 'Stor', favoriteFood: 'Griseøre', rating: 5, ratings: 28, picture: 'dogpictures/dog4.avif' },
         { id: 5, name: 'testnavn5', race: '', age: '', size: '', favoriteFood: '', rating: 4.5, ratings: 33, picture: 'dogpictures/dog5.avif' },
         { id: 6, name: 'testnavn6', race: '', age: '', size: '', favoriteFood: '', rating: 4, ratings: 52, picture: 'dogpictures/dog6.avif' },
         { id: 7, name: 'testnavn7', race: '', age: '', size: '', favoriteFood: '', rating: 3, ratings: 34, picture: 'dogpictures/dog7.avif' },

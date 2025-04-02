@@ -48,7 +48,7 @@ function fillTopList(type) {
         list.innerHTML += `
         <div class="dogInList">
             ${dogName} <br>
-            <img src=${pic} onclick="dogPageView()"> <br>
+            <img src=${pic} onclick="dogPageView(${dogID})"> <br>
             RATING HERE
         </div>
         `
