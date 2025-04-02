@@ -18,6 +18,7 @@ function dogPageView() {   //ta inn input her senere
             <div id='description'>Liker å kose</div> <br>
         </div>
     </div>
+    Oppdater info: <br> <br>
     <input id="breed" type="text" placeholder="Rase">
     <input id="breed" type="text" placeholder="Alder">    
     <input id="breed" type="text" placeholder="Størrelse/Vekt">    
