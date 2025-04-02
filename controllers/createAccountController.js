@@ -1,5 +1,5 @@
 function registerUser() {
-  
+
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
@@ -37,4 +37,8 @@ function registerUser() {
 
     
     dashboardViewFunction();
+}
+
+function profileButton() {
+    userProfileView();
 }
