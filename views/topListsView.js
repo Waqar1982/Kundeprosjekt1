@@ -34,7 +34,7 @@ function fillTopList(type) {
             <div class="dogInList">
                 ${dogName} <br>
                 <img src=${pic} onclick="dogPageView(${dogID})"> <br>
-                ${printStars(model.data.dogs[0].id)} <br> <br>
+                ${printStars(dogID)} <br> <br>
             </div>
 
             ` //Testbilder.
@@ -52,7 +52,7 @@ function fillTopList(type) {
             ${dogName} <br>
             <img src=${pic} onclick="dogPageView(${dogID})"> <br>
             
-             ${printStars(model.data.dogs[0].id)}
+             ${printStars(dogID)}
         </div>
         
         `
