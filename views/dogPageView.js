@@ -7,7 +7,7 @@ function dogPageView(idInput) {   //ta inn input her senere
     app.innerHTML = /*HTML*/ `
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
     <button onclick="ownerPageView()">Eiers profil</button> <br>
-    <h2>${dog.name}   ---- WIP ---- CSS kommer senere</h2>
+    <h2>${dog.name}</h2>
     <div class='row'>
         <div class='column1'>
             <img src=${dog.picture} alt="Aikos profil bilde" style="width: 400px; height: 400px;">

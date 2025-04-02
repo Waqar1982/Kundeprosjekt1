@@ -24,13 +24,16 @@ function topListsView() {
 }
 
 function fillTopList(type) {
+    list = document.getElementById(type)
     if(type =='all') {  //for testing
-        list = document.getElementById(type)
-        for(i=1; i<11; i++) {
+        for(i=0; i<10; i++) {
+            dogID = model.data.topLists[type][i]
+            pic = model.data.dogs[dogID-1].picture
+            dogName = model.data.dogs[dogID-1].name
             list.innerHTML += `
             <div class="dogInList">
-                ${model.data.dogs[i-1].name} <br>
-                <img src="dogpictures/dog${i}.avif" onclick="dogPageView()"> <br>
+                ${dogName} <br>
+                <img src=${pic} onclick="dogPageView(${dogID})"> <br>
                 RATING HERE <br> <br>
             </div>
 
@@ -40,7 +43,6 @@ function fillTopList(type) {
         }
         return
     }
-    list = document.getElementById(type)
     for(i=0; i<5; i++) {
         dogID = model.data.topLists[type][i]
         pic = model.data.dogs[dogID-1].picture
