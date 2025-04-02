@@ -2,10 +2,7 @@ function dogRatingView() {
     dogID = 4
     dog = model.data.dogs[dogID-1]
     app.innerHTML = /*html*/ `
-   <style>
-    backgroudcolor: green
-
-   </style>
+   
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
 
     <button onclick="topListsView()"style="cursor: pointer;">Flere Topplister</button>
