@@ -2,9 +2,11 @@ function startPageView() {
     app.innerHTML = /*html*/ `
     <img src="dogpictures/dog1.avif" alt="Hundebilde" style="position: absolute; top: 120px; left: 10px; height: 150px;">
     <div class="stars" style="position: absolute; top: 305px; left: 60px; color: gold;">
-        ${'★'.repeat(5)}${'☆'.repeat(5 - 5)}
+    ${printStars(model.data.dogs[0].id)}
     </div>
 
+    
+    
     <img src="dogpictures/dog2.avif" alt="Hundebilde" style="position: absolute; top: 300px; left: 10px; height: 150px;">
     <div class="stars" style="position: absolute; top: 485px; left: 60px; color: gold;">
         ${'★'.repeat(4)}${'☆'.repeat(5 - 4)}
