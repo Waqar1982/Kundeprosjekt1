@@ -42,7 +42,9 @@ function validatePassword(username, password) {
     const validCredentials = {
         'user1@example.com': 'password123',
         'user2@example.com': 'password456'
+        
     };
+    
     return validCredentials[username] === password;
 }
 
