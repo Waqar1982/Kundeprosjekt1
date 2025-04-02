@@ -68,7 +68,19 @@ function addDog() {
         closeAddDogForm();
         ownerPageView();
     } else {
-       ownerPageView(); // Oppdaterer visningen med feilmeldinger
+     // Sett feltene som røde eller grønne før vi oppdaterer visningen
+    if (invalidName) {
+        nameInput.style.border = '2px solid red';
+    } else {
+        nameInput.style.border = '2px solid green';
+    }
+
+    if (invalidImage) {
+        imageInput.style.border = '2px solid red';
+    } else {
+        imageInput.style.border = '2px solid green';
+    }
+   
     }
 }
 
