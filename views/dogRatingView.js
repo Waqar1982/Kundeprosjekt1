@@ -1,5 +1,6 @@
 function dogRatingView() {
     app.innerHTML = /*html*/ `
+    ${printStars(model.data.dogs[0].id)}
     
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
 
