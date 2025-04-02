@@ -3,7 +3,7 @@ function logIn() {
     const password = document.getElementById('password');
 
     username.classList.remove('input-error');
-    password.classList.remove('input-errors');
+    password.classList.remove('input-error');
 
     if (!validateEmail(username.value)) {
         username.classList.add('input-error'); // Legg til rød kant på brukernavn
