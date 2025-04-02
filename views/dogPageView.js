@@ -10,6 +10,7 @@ function dogPageView(idInput) {   //ta inn input her senere
     <h2>${dog.name}</h2>
     <div class='row'>
         <div class='column1'>
+        ${printStars(model.data.dogs[0].id)}
             <img src=${dog.picture} alt="Aikos profil bilde" style="width: 400px; height: 400px;">
         </div>
         <div class='column2'>
@@ -28,7 +29,7 @@ function dogPageView(idInput) {   //ta inn input her senere
     <input id="breed" type="text" placeholder="Favorittmat">  
     <img src="" alt="Flere bilder"> 
    
-    ${printStars(model.data.dogs[0].id)}
+   
     <input id="breed" type="text" placeholder="Her kan du skrive hva du vil">
     `
 }
