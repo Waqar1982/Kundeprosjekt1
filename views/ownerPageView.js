@@ -40,8 +40,8 @@ function ownerPageView() {
                 <!-- Skjema for å legge til ny hund (skjult som standard) -->
                 <div id="addDogForm" style="display: none; background: white; padding 20px; border-radius: 10px; margin-top: 20px;">
                 <h2>Legg til en ny hund</h2>
-                <input type="text" id="newDogName" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
-                <input type="text" id="newDogImage" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
+                <input type="text" id="newDogName" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px; ${invalidName ? 'border: 2px solid red;' : ''}"> <!-- Feilmelding ved tomt felt for navn -->
+                <input type="text" id="newDogImage" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px; ${invalidImage ? 'border: 2px solid red;' : ''}"> <!-- Feilmelding ved tomt bilde-URL-felt -->
                 <button onclick="addDog()" style="padding: 5px 10px;">Legg til</button>
                 <button onclick="closeAddDogForm()" style="padding: 5px 10px; margin-left: 10px;">Avbryt</button>
               </div>
