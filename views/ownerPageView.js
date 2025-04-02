@@ -49,7 +49,7 @@ function ownerPageView() {
           <!-- Viser lagrede hunder -->
           <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
             ${dogs.map(dog => `
-              <div style="text-align: center; margin-bottom: 20px;">
+              <div id="dog-${dog.name}" style="text-align: center; margin-bottom: 20px;">
               <button onclick="viewDog('${dog.name}')" style="padding: 5px 10px; margin-bottom: 5px;">${dog.name}</button>
               <br>
               <img src="${dog.imageURL}" style="width: 200px; border-radius: 10px;">
@@ -62,7 +62,7 @@ function ownerPageView() {
             <!-- Hardkodede hunder Luna og Aiko -->
             <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
             
-            <div style="text-align: center; margin-bottom: 20px;">
+            <div id="dog-Luna" style="text-align: center; margin-bottom: 20px;">
               <button onclick="viewDog('Luna')" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">
               Aiko
           </button>
@@ -70,7 +70,7 @@ function ownerPageView() {
               <img src="dogpictures/dog4.avif" style="width: 200px; border-radius: 10px;">
             </div>
 
-        <div style="text-align: center; margin-bottom: 20px;">
+        <div id="dog-Aiko" style="text-align: center; margin-bottom: 20px;">
         <br>
         <button onclick="viewDog('Aiko')" style="padding: 5px 10px; margin-bottom: 5px;">Luna</button>
         <br>
