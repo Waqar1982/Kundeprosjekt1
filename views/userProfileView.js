@@ -74,6 +74,7 @@ function userProfileView() {
                 <button onclick="dogPageView(1)" style="padding: 5px 10px; margin-bottom: 5px; background-color: lightblue; border: 1px solid black; border-radius: 5px;">testnavn1</button>
                 <br>
                 <img src="dogpictures/dog1.avif" style="width: 200px; border-radius: 10px;">
+                ${printStars(model.data.dogs[0].id)}
               </div>
   
           <div id="dog-Aiko" style="text-align: center; margin-bottom: 20px;">
@@ -81,6 +82,7 @@ function userProfileView() {
           <button onclick="dogPageView(2)" style="padding: 5px 10px; margin-bottom: 5px;">testnavn2</button>
           <br>
           <img src="dogpictures/dog2.avif" style="width: 200px; border-radius: 10px;">
+          ${printStars(model.data.dogs[0].id)}
           </div>
   
           </div>
