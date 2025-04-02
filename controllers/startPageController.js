@@ -9,17 +9,17 @@ function logIn() {
         username.classList.add('input-error'); // Legg til rød kant på brukernavn
         return;
     }
-
-    if (!isValidUser(username.value)) {
-        username.classList.add('input-error'); // Legg til rød kant på brukernavn
-        password.classList.add('input-error'); // Legg til rød kant passord
-        return;
-    }
-
     if (!validatePassword(username.value, password.value)) {
         password.classList.add('input-error'); // Legg til rød kant på passord
         return;
     }
+    if (!isValidUser(username.value,)) {
+       username.classList.add('input-error'); // Legg til rød kant på brukernavn
+       password.classList.add('input-error'); // Legg til rød kant passord
+       return;
+   }
+
+   
     // Redirect to dashboard view
     dashboardViewFunction();
 }
