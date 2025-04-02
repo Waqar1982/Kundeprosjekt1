@@ -31,8 +31,10 @@ function dashboardViewFunction() {
     <input type="text" id="search" placeholder="Søk">
     <button onclick="ratingSite()">Ratingside</button>
     <button onclick= "mainView()">Tilbake til Main View</button>
-    <button onclick="userProfileView()">Min Profil</button>
+    <button id="profileButton" onclick="profileButton()">Profil</button>
     </div>
+
+    
 
     <h1>Dashboard</h1>
     <div id="todaysDog">
