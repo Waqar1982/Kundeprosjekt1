@@ -27,7 +27,8 @@ function dogPageView(idInput) {   //ta inn input her senere
     <input id="breed" type="text" placeholder="Størrelse/Vekt">    
     <input id="breed" type="text" placeholder="Favorittmat">  
     <img src="" alt="Flere bilder"> 
-    <h1>Rating stars</h1>
+   
+    ${printStars(model.data.dogs[0].id)}
     <input id="breed" type="text" placeholder="Her kan du skrive hva du vil">
     `
 }
