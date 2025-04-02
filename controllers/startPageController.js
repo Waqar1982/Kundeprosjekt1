@@ -1,19 +1,23 @@
 function logIn() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
 
-    if (!validateEmail(username)) {
-        alert('Brukernavn må være en gyldig e-postadresse.');
+    username.classList.remove('input-error');
+    password.classList.remove('input-error');
+
+    if (!validateEmail(username.value)) {
+        username.classList.add('input-error'); // Legg til rød kant på brukernavn
         return;
     }
 
-    if (!isValidUser(username)) {
-        alert('Feil brukernavn eller passord.');
+    if (!isValidUser(username.value)) {
+        username.classList.add('input-error'); // Legg til rød kant på brukernavn
+        password.classList.add('input-error'); // Legg til rød kant passord
         return;
     }
 
-    if (!validatePassword(username, password)) {
-        alert('Feil brukernavn eller passord.');
+    if (!validatePassword(username.value, password.value)) {
+        password.classList.add('input-error'); // Legg til rød kant på passord
         return;
     }
     // Redirect to dashboard view
