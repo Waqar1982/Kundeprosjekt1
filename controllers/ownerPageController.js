@@ -1,6 +1,10 @@
 // Initialiserer hundelisten hvis den ikke finnes fra før
 let dogs = JSON.parse(localStorage.getItem('dogs')) || [];
 
+// Legger til variabler som holder styr på om feltene er gyldige
+let invalidName = false;
+let invalidImage = false;
+
 // Lagrer og henter bio fra localStorage
 function saveBio() {
     const bioText = document.getElementById('bioOwner').value;
@@ -47,30 +51,34 @@ function closeAddDogForm() {
     if (form) form.style.display = 'none';
 }
 
-// Legger til en ny hund og oppdaterer visningen
+// Legger til en ny hund og oppdaterer visningen med visuell feilmelding
 function addDog() {
-    const name = document.getElementById('newDogName').value;
-    const imageURL = document.getElementById('newDogImage').value;
+    const nameInput = document.getElementById('newDogName');
+    const imageInput = document.getElementById('newDogImage');
+    const name = nameInput.value.trim();
+    const imageURL = imageInput.value.trim();
 
-    if (name && imageURL) {
+    // Sjekker om feltene er tomme
+    invalidName = !name;
+    invalidImage = !imageURL;
+
+    if (!invalidName && !invalidImage) {
         dogs.push({ name, imageURL});
         saveDogs();
         closeAddDogForm();
         ownerPageView();
     } else {
-        alert('Vennligst fyll ut både navn og bilde-URL');
+       ownerPageView(); // Oppdaterer visningen med feilmeldinger
     }
 }
 
-// Slette hund
-function deleteDog(name) {
-    const confirmation = confirm(`Er du sikker på at du vil slette ${name}?`);
-    if (confirmation) {
+    // Slette hund med oppdatering av visning
+    function deleteDog(name) {
     dogs = dogs.filter(dog => dog.name !== name);
     saveDogs();
     ownerPageView();
 }
-}
+
 // Viser detaljer for en bestemt hund
 function viewDog(name) {
     const dog = dogs.find(d => d.name === name);
