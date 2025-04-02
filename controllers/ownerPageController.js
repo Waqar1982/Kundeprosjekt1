@@ -89,7 +89,7 @@ function askDeleteDog(name) {
     document.getElementById(`confirm-delete-${name}`).style.display = 'inline-block';
     document.getElementById(`cancel-delete-${name}`).style.display = 'inline-block';
     document.getElementById(`dog-${name}`).style.border = '2px solid red'; // Marker hunden med rød kant
-    const deleteButton = document.querySelector(`#dog-${name} button`);
+    const deleteButton = document.getElementById(`delete-${name}`);
     if (deleteButton) {
         deleteButton.style.display = 'none'; // Skjuler slett-knappen
     }
@@ -100,7 +100,7 @@ function cancelDeleteDog(name) {
     document.getElementById(`confirm-delete-${name}`).style.display = 'none'; // Skjul Bekreft slett
     document.getElementById(`cancel-delete-${name}`).style.display = 'none'; // Skjul Avbryt
     document.getElementById(`dog-${name}`).style.border = 'none'; // Fjern rød kant
-    const deleteButton = document.querySelector(`#dog-${name} button`); // Finner slett-knappen
+    const deleteButton = document.getElementById(`delete-${name}`); // Finner slett-knappen
     if (deleteButton) {
         deleteButton.style.display = 'inline-block'; // Vis Slett-knappen igjen
     }
