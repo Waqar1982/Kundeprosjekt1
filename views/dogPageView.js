@@ -12,7 +12,7 @@ function dogPageView(idInput) {   //ta inn input her senere
     <h2>${dog.name}</h2>
     <div class='row'>
         <div class='column1'>
-            ${printStars(model.data.dogs[0].id)}
+            ${printStars(dog.id)}
             <img src=${dog.picture} alt="Aikos profil bilde" style="width: 400px; height: 400px;">
         </div>
         <div class='column2'>
