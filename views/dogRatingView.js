@@ -1,5 +1,8 @@
-function dogRatingView() {
+function dogRatingView(idInput) {
     dogID = 4;
+    if(idInput && idInput < model.data.dogs.length+1) {
+        dogID = idInput
+    }
     dog = model.data.dogs[dogID-1];
     app.innerHTML = /*html*/ `
    
@@ -12,9 +15,9 @@ function dogRatingView() {
    
    
     <h2>${dog.name}<h2>
-    <button onclick="tilbake()"style="cursor: pointer;">Tilbake</button>
+    <button onclick="dogRatingView(dogID-1)"style="cursor: pointer;">Tilbake</button>
     <img src=${dog.picture}>
-    <button onclick="gåTilNeste()"style="cursor: pointer;">Gå til neste</button>
+    <button onclick="dogRatingView(dogID+1)"style="cursor: pointer;">Gå til neste</button>
     <div id="stars">${printStars(model.data.dogs[0].id)}</div>
     
     <h2>Rase: ${dog.race}<h2>
