@@ -1,8 +1,8 @@
 
 
-mainView ()
-function mainView(){
-    app.innerHTML=/*HTML*/`
+updateview ()
+function header(){
+return/*HTML*/`
     <button onclick= "ratingStarsView()">RatingStarsView</button>
     <button onclick= "dashboardViewFunction()">DashboardView</button> 
     <button onclick= "dogPageView()">DogPageView</button>
@@ -15,4 +15,28 @@ function mainView(){
     <button onclick= "createAccountView()">CreateAccountView</button>
   `
   
+}
+function updateview (){
+const content=chosenview()
+
+
+app.innerHTML=/*HTML*/`
+<header>${header()}</header>
+<main>${content}</main>
+`
+
+}
+function chosenview (){
+  console.log (model.app.currentPage)
+if(model.app.currentPage==model.app.page[0]){
+return startPageView()
+
+}else if(model.app.currentPage==model.app.page[1]){
+  return dashboardViewFunction()
+}
+
+}
+function changePage (newPage){
+model.app.currentPage=newPage;
+updateview()
 }

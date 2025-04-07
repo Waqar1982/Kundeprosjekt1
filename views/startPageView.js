@@ -1,5 +1,6 @@
 function startPageView() {
-    app.innerHTML = /*html*/ `
+    let html=""
+    html+= /*html*/ `
 
     <div id="loginBox">
     <input type="text" id="username" placeholder="Brukernavn">
@@ -32,11 +33,12 @@ function startPageView() {
         dog = dogs[i]
         top1 = 120 + 180*i
         top2 = 305 + 180*i
-        app.innerHTML += `
+        html += `
         <img src="${dog.picture}" onclick="dogPageView(${i+1})" alt="Hundebilde" style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
         <div class="stars" style="position: absolute; top: ${top2}px; left: 60px; color: gold;">
         ${printStars(dog.id)}
         </div>
         `
     }
+    return html
 }
