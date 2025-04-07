@@ -6,9 +6,9 @@ return/*HTML*/`
     <button onclick= "ratingStarsView()">RatingStarsView</button>
     <button onclick= "dashboardViewFunction()">DashboardView</button> 
     <button onclick= "dogPageView()">DogPageView</button>
-    <button onclick= "dogRatingView()">DogRatingView</button>
+    <button onclick= "changePage('RatingPage')">DogRatingView</button>
     <button onclick= "ownerPageView()">OwnerPagerView</button>
-    <button onclick= "startPageView()">StartPageView</button>
+    <button onclick= "changePage('startPage')">StartPageView</button>
     <button onclick= "topListsView()">TopListsView</button>
     <button onclick= "userProfileView()">UserProfileView</button>
     <button onclick= "searchView()">searchView</button>
@@ -33,6 +33,8 @@ return startPageView()
 
 }else if(model.app.currentPage==model.app.page[1]){
   return dashboardViewFunction()
+}else if(model.app.currentPage==model.app.page[2]){
+  return dogRatingView()
 }
 
 }
@@ -40,3 +42,8 @@ function changePage (newPage){
 model.app.currentPage=newPage;
 updateview()
 }
+
+
+
+
+

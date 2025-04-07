@@ -3,8 +3,8 @@ function startPageView() {
     html+= /*html*/ `
 
     <div id="loginBox">
-    <input type="text" id="username" placeholder="Brukernavn">
-    <input type="text" id="password" placeholder="Passord">
+    <input type="text" id="username" placeholder="Brukernavn" onchange="saveUsernameInput(this.value)">
+    <input type="text" id="password" placeholder="Passord" onchange="savePasswordInput(this.value)">
     <button onclick="logIn()">Logg Inn</button>
     <button onclick="createAccount()">Lag en konto</button>
     </div>

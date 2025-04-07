@@ -1,6 +1,14 @@
+function saveUsernameInput(username){
+model.inputs.loggInn.userName = username;
+}
+function savePasswordInput(password){
+    model.inputs.loggInn.password = password;
+    }
+
+
 function logIn() {
-    const username = document.getElementById('username');
-    const password = document.getElementById('password');
+    const username = document.querySelector('#username');
+    const password = document.querySelector('#password');
 
 
     password.classList.remove('input-error');
@@ -26,6 +34,18 @@ function logIn() {
    
     // Redirect to dashboard view
     dashboardViewFunction();
+
+
+
+    for(let i = 0; i< model.data.users.length; i++){
+        if(model.data.users[i].email == model.inputs.loggInn.userName && model.data.users[i].password == model.inputs.loggInn.password){
+            //yay logget inn
+            model.app.currentUserId = model.data.users[i].userID;
+        }
+    }
+
+    //const user = model.data.users.find(element => element.userID == model.app.currentUserId);
+    //user.fistName
 }
 
 function validateEmail(email) {
