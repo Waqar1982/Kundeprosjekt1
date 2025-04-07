@@ -102,6 +102,3 @@ function loadBio() {
     document.getElementById('bioOwner').value = savedBio;
   }
 }
-
-
-
