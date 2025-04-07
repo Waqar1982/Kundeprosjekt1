@@ -21,7 +21,7 @@ function startPageView() {
     ${printStars(model.data.dogs[0].id)}
         </div>
     </div>
-    <input type="text" id="newsBox" placeholder="Nyheter!">
+    <input type="text" id="newsBox" placeholder="Ukes hunderase:"; style="height:350px;  border-radius: 5px; ">
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
     </div>
