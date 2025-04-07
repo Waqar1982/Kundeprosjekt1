@@ -3,7 +3,7 @@ const app = document.getElementById('app')
 const model = {
 
 app:{
-    currentPage: 'startPageView',
+    currentPage: 'startPageView', // 
 
     page: [
         'startPage', 
