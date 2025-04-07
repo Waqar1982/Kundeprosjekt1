@@ -4,27 +4,6 @@ body {
     padding-top: 50px;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode #loginBox, 
-body.dark-mode #todaysDog, 
-body.dark-mode #top5Dogs, 
-body.dark-mode #newsBox {
-    background-color: #1e1e1e;
-    border-color: #444;
-}
-
-body.dark-mode .star {
-    color: #a0a0a0;
-}
-
-body.dark-mode .star:hover,
-body.dark-mode .star.selected {
-    color: gold;
-}
 #loginBox {
     position: absolute;
     top: 10px;
@@ -37,11 +16,13 @@ body.dark-mode .star.selected {
     flex-direction: column;
     gap: 15px;
     
+    
 }
 
 .input-error {
     border: 2px solid red;
 }
+
 
 #topLeft {
     position: absolute;
