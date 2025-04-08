@@ -13,6 +13,7 @@ function dashboardViewFunction() {
     </div>
 
     <input type="text" id="newsBox" placeholder="Nyheter!" style="height:350px;  border-radius: 5px; ">
+    <button id="profileButton" onclick="profileButton()">Profil</button>
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
     <div>${printDogs()}</div>
