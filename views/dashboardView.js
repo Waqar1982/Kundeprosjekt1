@@ -40,3 +40,5 @@ function printDogs (){
     }
     return html
 }
+
+<script src="fellesFunksjoner.js"></script>
