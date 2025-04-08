@@ -4,7 +4,7 @@ const model = {
 
 app:{
     currentUserId: null,
-    currentPage: 'startPage', // 
+    currentPage: 'dashboard', // 
 
     page: [
         'startPage', 
@@ -106,6 +106,7 @@ data: {
         shiba: [],
         labrador: [],
         mix: [],
+        adopted: []
     },
     /* topLists: [{
         listID: 1,

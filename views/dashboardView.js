@@ -1,10 +1,11 @@
 function dashboardViewFunction() {
     let html=""
+    let logInMenu = model.app.currentUserId == null ? logInView() : ""
     html += /*HTML*/ `
 
   
     
-
+    ${logInMenu}
     <h1>Dashboard</h1>
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
@@ -13,7 +14,6 @@ function dashboardViewFunction() {
     </div>
 
     <input type="text" id="newsBox" placeholder="Nyheter!" style="height:350px;  border-radius: 5px; ">
-    <button id="profileButton" onclick="profileButton()">Profil</button>
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
     <div>${printDogs()}</div>

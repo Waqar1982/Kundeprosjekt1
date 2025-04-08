@@ -1,14 +1,8 @@
 function startPageView() {
     let html=""
     html+= /*html*/ `
+ 
 
-    <div id="loginBox">
-    <input type="text" id="username" placeholder="Brukernavn" onchange="saveUsernameInput(this.value)">
-    <input type="text" id="password" placeholder="Passord" onchange="savePasswordInput(this.value)">
-    <button onclick="logIn()">Logg Inn</button>
-    <button onclick="createAccount()">Lag en konto</button>
-    </div>
-  
     <h1>StartPage</h1>
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
@@ -35,5 +29,18 @@ function startPageView() {
         </div>
         `
     }
+    return html
+}
+
+function logInView() {
+    let html=""
+    html+= /*html*/ `
+    <div id="loginBox">
+    <input type="text" id="username" placeholder="Brukernavn" onchange="saveUsernameInput(this.value)">
+    <input type="text" id="password" placeholder="Passord" onchange="savePasswordInput(this.value)">
+    <button onclick="logIn()">Logg Inn</button>
+    <button onclick="createAccount()">Lag en konto</button>
+    </div>
+    `
     return html
 }

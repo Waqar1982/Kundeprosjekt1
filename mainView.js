@@ -2,6 +2,7 @@
 
 updateview ()
 function header(){
+  let profileButtonHTML = model.app.currentUserId == null ? "" : profileButton()
 return/*HTML*/`
 
    
@@ -9,10 +10,9 @@ return/*HTML*/`
     <button onclick= "changePage('dogPage')">dogPageView</button>
     <button onclick= "changePage('RatingPage')">DogRatingView</button>
     <button onclick= "changePage('ownerPage')">OwnerPagerView</button>
-    <button onclick= "changePage('startPage')">StartPageView</button>
     <button onclick= "changePage('topLists')">TopListsView</button>
-    <button onclick= "userProfileView()">UserProfileView</button>
     <button onclick= "createAccountView()">CreateAccountView</button>
+    ${profileButtonHTML}
     ${searchView()}
   `
   
@@ -58,6 +58,11 @@ function changeCurrentDog (newDogID){
 
 }
 
+function profileButton () {
+  return /*HTML*/`
+<button id="profileButton" onclick="changePage('profil')">Profil</button>
 
+  `
+}
 
 

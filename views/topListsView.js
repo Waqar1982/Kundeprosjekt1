@@ -5,39 +5,35 @@ function topListsView() {
    
 
     <h1>Topp 10 Hunder</h1>
-    <div id='all' class="topList"></div>
+    <div id='all' class="topList">${fillTopList('all', 10)}</div>
     
     <h1>Topp 5 Små Hunder</h1>
-    <div id='small' class="topList"></div>
+    <div id='small' class="topList">${fillTopList('small', 5)}</div>
     
     <h1>Topp 5 Store Hunder</h1>
-    <div id='big' class="topList"></div>
+    <div id='big' class="topList">${fillTopList('big', 5)}</div>
     
     <h1>Topp 5 Adopterte Hunder</h1>
-    <div id='adopted' class="topList"></div>
+    <div id='adopted' class="topList">${fillTopList('adopted', 5)}</div>
     
     <h1>Topp 5 Shiba Inu</h1>
-    <div id='shiba' class="topList"></div>
+    <div id='shiba' class="topList">${fillTopList('shiba', 5)}</div>
     
     `
-    return html
-    fillTopList('all')
-    fillTopList('small')
-    fillTopList('big')
     
+    return html
 }
 
-function fillTopList(type) {
-    list = document.getElementById(type)
-    if(type =='all') {  //for testing
-        for(i=0; i<10; i++) {
-            dogID = model.data.topLists[type][i]
-            pic = model.data.dogs[dogID-1].picture
-            dogName = model.data.dogs[dogID-1].name
-            list.innerHTML += `
+function fillTopList(type, number) {
+let html = ""
+        for(i=0; i<number; i++) {
+            let dogID = model.data.topLists[type][i]
+            console.log(dogID)
+            const dog = model.data.dogs.find(element => element.id == dogID)
+            html += `
             <div class="dogInList">
-                ${dogName} <br>
-                <img src=${pic} onclick="dogPageView(${dogID})"> <br>
+                ${dog.name} <br>
+                <img src=${dog.picture} onclick="dogPageView(${dogID})"> <br>
                 ${printStars(dogID)} <br> <br>
             </div>
 
@@ -47,23 +43,8 @@ function fillTopList(type) {
             // Bilder skal komme fra topplister i modellen som kan endres med kode
             // Bilder og/eller navn lenker til hundenes profil.
             
-        }
        
     }
-    for(i=0; i<5; i++) {
-        dogID = model.data.topLists[type][i]
-        pic = model.data.dogs[dogID-1].picture
-        dogName = model.data.dogs[dogID-1].name
-        list.innerHTML += `
-        <div class="dogInList">
-            ${dogName} <br>
-            <img src=${pic} onclick="dogPageView(${dogID})"> <br>
-            
-             ${printStars(dogID)}
-        </div>
-        
-        `
-        
-    }
-    
+    return html
+
 }

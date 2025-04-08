@@ -16,33 +16,37 @@ function logIn() {
  
     
     console.log (password)
-
-    if (!validateEmail(username.value)) {
+    const findUser = model.data.users.find(element=>element.email==model.inputs.loggInn.userName)
+    const findPassword = model.data.users.find(element=>element.password==model.inputs.loggInn.password)
+    if (!findUser) {
         username.classList.add('input-error'); // Legg til rød kant på brukernavn
-        return;
+        //return;
     }
-    if (!validatePassword(username.value, password.value)) {
+    if (!findPassword) {
         password.classList.add('input-error'); // Legg til rød kant på passord
-        return;
+        //return;
     }
-    if (!isValidUser(username.value,)) {
+    /*if (!isValidUser(username.value,)) {
        username.classList.add('input-error'); // Legg til rød kant på brukernavn
        password.classList.add('input-error'); // Legg til rød kant passord
        return;
-   }
-
-   
-    // Redirect to dashboard view
-    dashboardViewFunction();
-
-
-
+   }*/
+else if (findUser && findPassword) {
+    console.log("kjørerelse")
     for(let i = 0; i< model.data.users.length; i++){
+        console.log("kjørerloop")
         if(model.data.users[i].email == model.inputs.loggInn.userName && model.data.users[i].password == model.inputs.loggInn.password){
-            //yay logget inn
+            console.log("Logged in")
             model.app.currentUserId = model.data.users[i].userID;
+            changePage("dashboard");
         }
     }
+}
+   
+    // Redirect to dashboard view
+   
+
+
 
     //const user = model.data.users.find(element => element.userID == model.app.currentUserId);
     //user.fistName
