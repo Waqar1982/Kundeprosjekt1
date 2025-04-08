@@ -1,6 +1,8 @@
 function topListsView() {
-    app.innerHTML = /*html*/ `
-    <button onclick= "mainView()">Tilbake til Main View</button>
+    let html =""
+    html += /*html*/ `
+
+   
 
     <h1>Topp 10 Hunder</h1>
     <div id='all' class="topList"></div>
@@ -18,9 +20,11 @@ function topListsView() {
     <div id='shiba' class="topList"></div>
     
     `
+    return html
     fillTopList('all')
     fillTopList('small')
     fillTopList('big')
+    
 }
 
 function fillTopList(type) {
@@ -37,11 +41,14 @@ function fillTopList(type) {
                 ${printStars(dogID)} <br> <br>
             </div>
 
-            ` //Testbilder.
+            ` 
+            
+            //Testbilder.
             // Bilder skal komme fra topplister i modellen som kan endres med kode
             // Bilder og/eller navn lenker til hundenes profil.
+            
         }
-        return
+       
     }
     for(i=0; i<5; i++) {
         dogID = model.data.topLists[type][i]
@@ -56,5 +63,7 @@ function fillTopList(type) {
         </div>
         
         `
+        
     }
+    
 }

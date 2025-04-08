@@ -1,25 +1,11 @@
 function ownerPageView() {
   loadBio(); // Laste inn bio fra loclStorage
   loadDogs(); // Laste inn eksisterende hunder fra localStorage
-
-  app.innerHTML = /*html*/ `
+let html =""
+html += /*html*/ `
     <div style="position: relative; text-align: center; font-family: Helvetica, sans-serif; padding: 20px;">
 
-      <!-- KNAPPER OG SØKEFELT PÅ EGEN LINJE -->
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0 20px;">
-        
-        <!-- KNAPPENE -->
-        <div style="display: flex; gap: 15px; margin-top: -120px; margin-left: -40px;"> <!-- Økt gap mellom knappene -->
-          <button onclick= "mainView()" style="padding: 1px 3px; font-size: 12px;">Tilbake til Main View</button>
-          <button onclick="topListsView()" style="padding: 1px 3px; font-size: 12px;">Flere Topplister</button>
-          <button onclick="ratingSite()" style="padding: 1px 3px; font-size: 12px;">Ratingside</button>
-      </div>
-
-      
-
-        <!-- SØKEFELTET -->
-        <input type="text" id="search" placeholder="Søk" style="padding: 5px; width: 250px; margin-top: -110px; margin-right: -40px;">
-       </div>
+     
 
         <!-- PROFIL -->
         <div style="display: flex; justify-content: flex-end; padding-right: 20px; margin-bottom: 20px;">
@@ -84,7 +70,9 @@ function ownerPageView() {
 
         </div>
     </div>  
+    
   `;
+  return html
 
   dogs.forEach(dog => {
     const confirmBtn = document.getElementById(`confirm-delete-${dog.name}`);
@@ -101,4 +89,5 @@ function loadBio() {
   if (savedBio) {
     document.getElementById('bioOwner').value = savedBio;
   }
+  
 }

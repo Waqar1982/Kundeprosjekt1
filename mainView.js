@@ -6,11 +6,11 @@ return/*HTML*/`
 
    
     <button onclick= "changePage('dashboard')">DashboardView</button> 
-    <button onclick= "dogPageView()">DogPageView</button>
+    <button onclick= "changePage('dogPage')">dogPageView</button>
     <button onclick= "changePage('RatingPage')">DogRatingView</button>
-    <button onclick= "ownerPageView()">OwnerPagerView</button>
+    <button onclick= "changePage('ownerPage')">OwnerPagerView</button>
     <button onclick= "changePage('startPage')">StartPageView</button>
-    <button onclick= "topListsView()">TopListsView</button>
+    <button onclick= "changePage('topLists')">TopListsView</button>
     <button onclick= "userProfileView()">UserProfileView</button>
     <button onclick= "createAccountView()">CreateAccountView</button>
     ${searchView()}
@@ -40,6 +40,10 @@ return startPageView()
   return dashboardViewFunction()
 }else if (model.app.currentPage==model.app.page[5]){
   return dogPageView()
+}else if (model.app.currentPage==model.app.page[4]){
+  return ownerPageView()
+}else if (model.app.currentPage==model.app.page[6]){
+  return topListsView()
 }
 
 }
