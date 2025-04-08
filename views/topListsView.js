@@ -20,7 +20,7 @@ function topListsView() {
     <div id='shiba' class="topList"></div>
     
     `
-    return html
+    
     fillTopList('all')
     fillTopList('small')
     fillTopList('big')
@@ -65,5 +65,5 @@ function fillTopList(type) {
         `
         
     }
-    
+    return html
 }
