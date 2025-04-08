@@ -1,10 +1,10 @@
 function searchView() {
-   app.innerHTML = /*HTML*/`
-
+   return /*HTML*/`
+<div>
     <button onclick= "mainView()">Tilbake til Main View</button>
 
     <input type="text" id="search" placeholder="Søk">
-   
+</div>
 `
 }
 

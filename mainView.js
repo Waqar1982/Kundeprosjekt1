@@ -3,7 +3,8 @@
 updateview ()
 function header(){
 return/*HTML*/`
-    <button onclick= "ratingStarsView()">RatingStarsView</button>
+
+   
     <button onclick= "changePage('dashboard')">DashboardView</button> 
     <button onclick= "dogPageView()">DogPageView</button>
     <button onclick= "changePage('RatingPage')">DogRatingView</button>
@@ -11,8 +12,8 @@ return/*HTML*/`
     <button onclick= "changePage('startPage')">StartPageView</button>
     <button onclick= "topListsView()">TopListsView</button>
     <button onclick= "userProfileView()">UserProfileView</button>
-    <button onclick= "searchView()">searchView</button>
     <button onclick= "createAccountView()">CreateAccountView</button>
+    ${searchView()}
   `
   
 }

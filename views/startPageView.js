@@ -8,12 +8,7 @@ function startPageView() {
     <button onclick="logIn()">Logg Inn</button>
     <button onclick="createAccount()">Lag en konto</button>
     </div>
-    <div id="topLeft">
-    <button onclick="topLists()">Flere Topplister</button>
-    <input type="text" id="search" placeholder="Søk">
-    <button onclick="ratingSite()">Ratingside</button>
-    <button onclick= "mainView()">Tilbake til Main View</button>
-    </div>
+  
     <h1>StartPage</h1>
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>

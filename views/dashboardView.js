@@ -2,13 +2,7 @@ function dashboardViewFunction() {
     let html=""
     html += /*HTML*/ `
 
-    <div id="topLeft">
-    <button onclick="topLists()">Flere Topplister</button>
-    <input type="text" id="search" placeholder="Søk">
-    <button onclick="ratingSite()">Ratingside</button>
-    <button onclick= "mainView()">Tilbake til Main View</button>
-    <button id="profileButton" onclick="profileButton()">Profil</button>
-    </div>
+  
     
 
     <h1>Dashboard</h1>
