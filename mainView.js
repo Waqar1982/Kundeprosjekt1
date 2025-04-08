@@ -4,9 +4,9 @@ updateview ()
 function header(){
 return/*HTML*/`
     <button onclick= "ratingStarsView()">RatingStarsView</button>
-    <button onclick= "dashboardViewFunction()">DashboardView</button> 
+    <button onclick= "changePage('dashboard')">DashboardView</button> 
     <button onclick= "dogPageView()">DogPageView</button>
-    <button onclick= "changePage('')">DogRatingView</button>
+    <button onclick= "changePage('RatingPage')">DogRatingView</button>
     <button onclick= "ownerPageView()">OwnerPagerView</button>
     <button onclick= "changePage('startPage')">StartPageView</button>
     <button onclick= "topListsView()">TopListsView</button>
@@ -34,7 +34,11 @@ return startPageView()
 }else if(model.app.currentPage==model.app.page[1]){
   return dashboardViewFunction()
 }else if(model.app.currentPage==model.app.page[2]){
-  return dogRatingView()
+  return dogRating()
+}else if (model.app.currentPage==model.app.page[3]){
+  return dashboardViewFunction()
+}else if (model.app.currentPage==model.app.page[5]){
+  return dogPageView()
 }
 
 }
@@ -42,7 +46,12 @@ function changePage (newPage){
 model.app.currentPage=newPage;
 updateview()
 }
+function changeCurrentDog (newDogID){
+   model.inputs.currentDogID=newDogID;
+   changePage('dogPage')
+    
 
+}
 
 
 

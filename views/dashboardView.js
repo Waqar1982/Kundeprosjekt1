@@ -1,5 +1,6 @@
 function dashboardViewFunction() {
-    app.innerHTML = /*HTML*/ `
+    let html=""
+    html += /*HTML*/ `
 
     <div id="topLeft">
     <button onclick="topLists()">Flere Topplister</button>
@@ -20,19 +21,28 @@ function dashboardViewFunction() {
     <input type="text" id="newsBox" placeholder="Nyheter!" style="height:350px;  border-radius: 5px; ">
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
+    <div>${printDogs()}</div>
     </div>
     `
+return html
+   
+}
+function printDogs (){
+   let dogs = model.data.dogs
+   let html=""
 
-    dogs = model.data.dogs
     for (i=0; i<5; i++) {
         dog = dogs[i]
         top1 = 120 + 180*i
         top2 = 305 + 180*i
-        app.innerHTML += `
-        <img src="${dog.picture}" onclick="dogPageView(${i+1})" alt="Hundebilde" style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
+        html += `
+        <div>
+        <img src="${dog.picture}" onclick="changeCurrentDog(${dog.id})" alt="Hundebilde" style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
         <div class="stars" style="position: absolute; top: ${top2}px; left: 60px; color: gold;">
         ${printStars(dog.id)}
         </div>
+        </div>
         `
     }
+    return html
 }

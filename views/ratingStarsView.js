@@ -1,18 +1,3 @@
-function ratingStarsView() {
-    console.log("kjører ratingStarsView")
-app.innerHTML = /*HTML*/`
-
-<button onclick= "mainView()">Tilbake til Main View</button>
-
-
-
-${printStars(model.data.dogs[0].id)}
-${printStarsDisplay(model.data.dogs[0].id)}
-${printStarsDisplay(model.data.dogs[1].id)}
-
-
-`
-}
 
 function printStars (id) {
 let ratingNumber = model.data.dogs.find((element)=>element.id==id).rating
@@ -62,7 +47,7 @@ function changeStarRating (chosenId,starIndex,){
 
 }
 //printStars(chosenId) 
-ratingStarsView()
+updateview()
  }
 
 

@@ -1,10 +1,9 @@
-function dogPageView(idInput) {   //ta inn input her senere
-    dogID = 3
-    if(idInput) {
-        dogID = idInput
-    }
-    dog = model.data.dogs[dogID-1]
-    app.innerHTML = /*HTML*/ `
+function dogPageView() {   //ta inn input her senere
+    let html=""
+
+  
+   let dog = model.data.dogs.find(element=>element.id==model.inputs.currentDogID)
+    html += /*HTML*/ `
     <button onclick= "mainView()">Tilbake til Main View</button>
     <button onclick= "topListsView()">Til toplister</button>
      <br> <br>
@@ -35,6 +34,7 @@ function dogPageView(idInput) {   //ta inn input her senere
    
     <input id="breed" type="text" placeholder="Her kan du skrive hva du vil">
     `
+    return html
 }
 
 // Må legge in beskrivelse i modellen for ${dog.desc} */

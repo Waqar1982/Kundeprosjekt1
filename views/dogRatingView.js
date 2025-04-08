@@ -1,39 +1,38 @@
-function dogRatingView(idInput) {
-    dogID = 3;
-    if(idInput && idInput < model.data.dogs.length+1) {
-        dogID = idInput
-    }
-    dog = model.data.dogs[dogID-1];
-    html += /*html*/ `
-   
-    <button id="darkModeToggle">Toggle Dark Mode</button>
-    <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
+function dogRating() {
+    
 
-    <button onclick="topListsView()"style="cursor: pointer;">Flere Topplister</button>
-    <input type="text" id="search" placeholder="Søk">
-    <button onclick="myProfile()"style="cursor: pointer;">Min Profil</button>
+    let html=""
+   let dogID = model.inputs.currentDogID;
+   /* if(idInput && idInput < model.data.dogs.length+1) {
+        dogID = idInput
+    }*/
+    //let dog = model.data.dogs[dogID-1];
+    const dog=model.data.dogs.find(element=>element.id==dogID)
+   html += /*html*/ `
    
+    
    
     <h2>${dog.name}<h2>
-    <button onclick="dogRatingView(dogID-1)"style="cursor: pointer;">Tilbake</button>
+    <button onclick="dogRating()"style="cursor: pointer;">Tilbake</button>
     <img src=${dog.picture}>
-    <button onclick="dogRatingView(dogID+1)"style="cursor: pointer;">Gå til neste</button>
-    <div id="stars">${printStars(model.data.dogs[0].id)}</div>
+    <button onclick="dogRating()"style="cursor: pointer;">Gå til neste</button>
+    <div id="stars">${printStars(dog.id)}</div>
     
     <h2>Rase: ${dog.race}<h2>
     `;
+    return html
 
-    const darkModeToggle = document.getElementById('darkModeToggle');
+    /*const darkModeToggle = document.getElementById('darkModeToggle');
             darkModeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
         // Re-render the stars after toggling dark mode
         document.getElementById('stars').innerHTML = printStars(model.data.dogs[0].id);
-    });
+    });*/
 }
 
 // Update the stars in dogRatingView after clicking on stars in ratingStarsView
 
 function updateDogRatingViewStars() {
-document.getElementById('stars').innerHTML = printStars(model.data.dogs[0].id);
+document.getElementById('stars').innerHTML = printStars(model.inputs.currentDogID);
+
 }
-return html
