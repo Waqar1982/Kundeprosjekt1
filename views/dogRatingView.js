@@ -1,10 +1,10 @@
 function dogRatingView(idInput) {
-    dogID = 4;
+    dogID = 3;
     if(idInput && idInput < model.data.dogs.length+1) {
         dogID = idInput
     }
     dog = model.data.dogs[dogID-1];
-    app.innerHTML = /*html*/ `
+    html += /*html*/ `
    
     <button id="darkModeToggle">Toggle Dark Mode</button>
     <button onclick= "mainView()">Tilbake til Main View</button> <br> <br>
@@ -36,3 +36,4 @@ function dogRatingView(idInput) {
 function updateDogRatingViewStars() {
 document.getElementById('stars').innerHTML = printStars(model.data.dogs[0].id);
 }
+return html

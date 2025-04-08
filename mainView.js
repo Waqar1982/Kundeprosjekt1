@@ -4,7 +4,7 @@ updateview ()
 function header(){
 return/*HTML*/`
     <button onclick= "ratingStarsView()">RatingStarsView</button>
-    <button onclick= "dashboardViewFunction()">DashboardView</button> 
+    <button onclick= "changePage()">dashboard</button> 
     <button onclick= "dogPageView()">DogPageView</button>
     <button onclick= "changePage('RatingPage')">DogRatingView</button>
     <button onclick= "ownerPageView()">OwnerPagerView</button>
@@ -33,7 +33,7 @@ return startPageView()
 
 }else if(model.app.currentPage==model.app.page[1]){
   return dashboardViewFunction()
-}else if(model.app.currentPage==model.app.page[2]){
+}else if(model.app.currentPage==model.app.page[3]){
   return dogRatingView()
 }
 
