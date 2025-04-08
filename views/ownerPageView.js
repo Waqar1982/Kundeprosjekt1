@@ -2,7 +2,11 @@ function ownerPageView() {
   loadBio(); // Laste inn bio fra loclStorage
   loadDogs(); // Laste inn eksisterende hunder fra localStorage
 let html =""
+
 html += /*html*/ `
+
+
+
     <div style="position: relative; text-align: center; font-family: Helvetica, sans-serif; padding: 20px;">
 
      
