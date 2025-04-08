@@ -72,7 +72,7 @@ html += /*html*/ `
     </div>  
     
   `;
-  return html
+
 
   dogs.forEach(dog => {
     const confirmBtn = document.getElementById(`confirm-delete-${dog.name}`);
@@ -83,6 +83,7 @@ html += /*html*/ `
     if (cancelBtn) cancelBtn.style.display = 'none';  // Skjuler avbryt-slett-knappen
     if (dogDiv) dogDiv.style.border = 'none'; // Fjern eventuell rød kant
   });
+  return html
 }
 function loadBio() {
   const savedBio = localStorage.getItem('bio');
