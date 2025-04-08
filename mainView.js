@@ -6,7 +6,7 @@ return/*HTML*/`
     <button onclick= "ratingStarsView()">RatingStarsView</button>
     <button onclick= "dashboardViewFunction()">DashboardView</button> 
     <button onclick= "dogPageView()">DogPageView</button>
-    <button onclick= "changePage('RatingPage')">DogRatingView</button>
+    <button onclick= "changePage('')">DogRatingView</button>
     <button onclick= "ownerPageView()">OwnerPagerView</button>
     <button onclick= "changePage('startPage')">StartPageView</button>
     <button onclick= "topListsView()">TopListsView</button>
