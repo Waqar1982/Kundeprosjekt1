@@ -2,7 +2,7 @@ function dashboardViewFunction() {
     let html=""
     html += /*HTML*/ `
 
-  a
+  
     
 
     <h1>Dashboard</h1>
