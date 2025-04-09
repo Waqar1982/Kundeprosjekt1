@@ -77,7 +77,7 @@ html += /*html*/ `
     
   `;
 
- // document.getElementById('app').innerHTML = html; 
+  document.getElementById('app').innerHTML = html; 
 
   loadBio();
   return html
