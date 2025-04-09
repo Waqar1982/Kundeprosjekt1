@@ -14,7 +14,7 @@ function saveBio() {
 function loadBio() {
     const savedBio = localStorage.getItem('bio');
     if (savedBio) {
-        document.getElementById('bioOwner').value = savedBio;
+       // document.getElementById('bioOwner').value = savedBio;
     }
 }
 
