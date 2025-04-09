@@ -66,7 +66,7 @@ function addDog() {
         dogs.push({ name, imageURL});
         saveDogs();
         closeAddDogForm();
-        ownerPageView();
+        changePage('ownerPage');
     } else {
      // Sett feltene som røde eller grønne før vi oppdaterer visningen
     if (invalidName) {
@@ -115,7 +115,7 @@ function cancelDeleteDog(name) {
     if (index !== -1) {
         dogs.splice(index, 1); // Fjern hunden fra arrayet
         saveDogs(); // Lagre endringene
-        ownerPageView();
+        changePage('ownerPage');
     } else {
      // Hvis hunden ikke finnes, marker elementet rødt
         if (dogListElement) {
