@@ -34,7 +34,7 @@ function createAccountView() {
     <input type="text" id="password" placeholder="Passord" style= "width: 50%;">
     <input type="text" id="phone" placeholder="Telefonnummer" style= "width: 50%;">
     <button onclick="handleUserRegistration()" style= "width: 50%;">Registrer</button>
-    </div>
+    </div> 
     `;
     return html
 }
