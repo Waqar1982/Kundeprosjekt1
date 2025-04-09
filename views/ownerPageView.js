@@ -80,6 +80,7 @@ html += /*html*/ `
   document.getElementById('app').innerHTML = html; 
 
   loadBio();
+  return html
   }
 
   function loadBio() {
@@ -100,7 +101,7 @@ html += /*html*/ `
     if (cancelBtn) cancelBtn.style.display = 'none';  // Skjuler avbryt-slett-knappen
     if (dogDiv) dogDiv.style.border = 'none'; // Fjern eventuell rød kant
   });
-   //return html
+   
 
 
 
