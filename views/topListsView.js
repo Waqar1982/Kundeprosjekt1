@@ -2,7 +2,7 @@ function topListsView() {
     let html =""
     html += /*html*/ `
 
-
+    
     <h1>Topp 10 Hunder</h1>
     <div id='all' class="topList">${fillTopList('all', 10)}</div>
     
@@ -24,18 +24,17 @@ function topListsView() {
 
 function fillTopList(type, number) {
 let html = ""
-        for(i=0; i<number; i++) {
-            let dogID = model.data.topLists[type][i]
-            console.log(dogID)
-            const dog = model.data.dogs.find(element => element.id == dogID)
-            html += `
-            <div class="dogInList">
-                ${dog.name} <br>
-                <img src=${dog.picture} onclick="dogPageView(${dogID})"> <br>
-                ${printStars(dogID)} <br> <br>
-            </div>
-            ` 
+    for(i=0; i<number; i++) {
+        let dogID = model.data.topLists[type][i]
+        console.log(dogID)
+        const dog = model.data.dogs.find(element => element.id == dogID)
+        html += `
+        <div class="dogInList">
+            ${dog.name} <br>
+            <img src=${dog.picture} onclick="changeCurrentDog(${dogID})"> <br>
+            ${printStars(dogID)} <br> <br>
+        </div>
+        ` 
     }
     return html
-
 }

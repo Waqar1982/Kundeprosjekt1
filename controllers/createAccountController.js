@@ -28,17 +28,23 @@ function registerUser() {
         return;
     }
 
-   
-    console.log(`Registering user with the following details:
-        First Name: ${firstName}
-        Last Name: ${lastName}
-        Email: ${email}
-        Phone: ${phone}`);
+    const newUser = {
+        userID: model.data.users.length + 1,
+        adminUser: false,
+        firstName: firstName,
+        lastName: lastName,
+        password: '',
+        email: email,
+        profilePicture: '',
+        dogList: [],
+        info: 'Ny bruker',
+        dogRatings: [],
+    };
 
-    
-    dashboardViewFunction();
-}
+    model.data.users.push(newUser);
 
-function profileButton() {
-    userProfileView();
+    model.app.currentUserId = newUser.userID;
+    console.log("Ny bruker registrert og logget inn:", newUser);
+
+    changePage('dashboard');
 }

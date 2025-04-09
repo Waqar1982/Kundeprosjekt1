@@ -1,10 +1,7 @@
-
-
-updateview ()
+updateview()
 function header(){
   let profileButtonHTML = model.app.currentUserId == null ? "" : profileButton()
 return/*HTML*/`
-
    
     <button onclick= "changePage('dashboard')">DashboardView</button> 
     <button onclick= "changePage('dogPage')">dogPageView</button>
@@ -17,17 +14,16 @@ return/*HTML*/`
   `
   
 }
-function updateview (){
+function updateview(){
 const content=chosenview()
-
 
 app.innerHTML=/*HTML*/`
 <header>${header()}</header>
 <main>${content}</main>
 `
-
 }
-function chosenview (){
+
+function chosenview(){
   console.log (model.app.currentPage)
 if(model.app.currentPage==model.app.page[0]){
 return startPageView()
@@ -47,21 +43,19 @@ return startPageView()
 }
 
 }
-function changePage (newPage){
+function changePage(newPage){
 model.app.currentPage=newPage;
 updateview()
 }
-function changeCurrentDog (newDogID){
+
+function changeCurrentDog(newDogID){
    model.inputs.currentDogID=newDogID;
    changePage('dogPage')
-    
-
 }
 
-function profileButton () {
+function profileButton() {
   return /*HTML*/`
 <button id="profileButton" onclick="changePage('profil')">Profil</button>
-
   `
 }
 
