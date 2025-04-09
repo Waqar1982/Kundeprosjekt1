@@ -1,7 +1,7 @@
 function dogRating() {
     
     let html=""
-    dogID = model.inputs.currentDogID;
+    dogID = model.inputs.ratingDogID;
     /* if(idInput && idInput < model.data.dogs.length+1) {
         dogID = idInput
     }*/

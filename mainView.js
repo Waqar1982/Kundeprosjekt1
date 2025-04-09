@@ -55,7 +55,7 @@ function changeCurrentDog(newDogID){
 
 function changeRatingDog(newDogID){
   if(newDogID < model.data.dogs.length+1 && newDogID > 0) {
-    model.inputs.currentDogID=newDogID;
+    model.inputs.ratingDogID=newDogID;
   }
   changePage('ratingPage')
 }

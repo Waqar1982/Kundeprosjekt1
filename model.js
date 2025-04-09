@@ -19,7 +19,8 @@ app:{
 },
 
 inputs: {
-    currentDogID: 1,
+    currentDogID: 4,
+    ratingDogID: 7,
     
     loggInn: {
         userName: '',
