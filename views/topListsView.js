@@ -31,7 +31,7 @@ let html = ""
             html += `
             <div class="dogInList">
                 ${dog.name} <br>
-                <img src=${dog.picture} onclick="dogPageView(${dogID})"> <br>
+                <img src=${dog.picture} onclick="changeCurrentDog(${dogID})"> <br>
                 ${printStars(dogID)} <br> <br>
             </div>
             ` 
