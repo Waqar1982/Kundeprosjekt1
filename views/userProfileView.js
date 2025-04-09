@@ -17,7 +17,6 @@ function userProfileView() {
           
           <!-- KNAPPENE -->
           <div style="display: flex; gap: 15px; margin-top: -120px; margin-left: -40px;"> <!-- Økt gap mellom knappene -->
-            <button onclick= "mainView()" style="padding: 1px 3px; font-size: 12px;">Tilbake til Main View</button>
             <button onclick="topListsView()" style="padding: 1px 3px; font-size: 12px;">Flere Topplister</button>
             <button onclick="ratingSite()" style="padding: 1px 3px; font-size: 12px;">Ratingside</button>
             <button onclick="dashboardViewFunction()" style="padding: 1px 3px; font-size: 12px;">Hjemmeside</button>

@@ -31,7 +31,7 @@ function createAccountView() {
     <input type="text" id="email" placeholder="E-Post" style= "width: 50%;">
     <input type="text" id="phone" placeholder="Telefonnummer" style= "width: 50%;">
     <button onclick="registerUser()" style= "width: 50%;">Registrer</button>
-    <button onclick= "mainView()" style="width: 20%;">Tilbake til Main View</button>
+   
 </div>
 `
 }
