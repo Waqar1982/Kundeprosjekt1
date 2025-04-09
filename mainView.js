@@ -5,7 +5,7 @@ return/*HTML*/`
    
     <button onclick= "changePage('dashboard')">DashboardView</button> 
     <button onclick= "changePage('dogPage')">dogPageView</button>
-    <button onclick= "changePage('RatingPage')">DogRatingView</button>
+    <button onclick= "changePage('ratingPage')">DogRatingView</button>
     <button onclick= "changePage('ownerPage')">OwnerPagerView</button>
     <button onclick= "changePage('topLists')">TopListsView</button>
     <button onclick= "createAccountView()">CreateAccountView</button>
@@ -53,9 +53,16 @@ function changeCurrentDog(newDogID){
    changePage('dogPage')
 }
 
+function changeRatingDog(newDogID){
+  if(newDogID < model.data.dogs.length+1 && newDogID > 0) {
+    model.inputs.currentDogID=newDogID;
+  }
+  changePage('ratingPage')
+}
+
 function profileButton() {
   return /*HTML*/`
-<button id="profileButton" onclick="changePage('profil')">Profil</button>
+  <button id="profileButton" onclick="changePage('profil')">Profil</button>
   `
 }
 
