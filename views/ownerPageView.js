@@ -100,7 +100,7 @@ html += /*html*/ `
     if (cancelBtn) cancelBtn.style.display = 'none';  // Skjuler avbryt-slett-knappen
     if (dogDiv) dogDiv.style.border = 'none'; // Fjern eventuell rød kant
   });
-  // return html
+   //return html
 
 
 
