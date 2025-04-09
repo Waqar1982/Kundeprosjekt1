@@ -9,15 +9,14 @@ app:{
     page: [
         'startPage', 
         'dashboard', 
-        'RatingPage',
+        'ratingPage',
         'profil',
         'ownerPage',
         'dogPage',
         'topLists',
         'search']
-
-
 },
+
 inputs: {
     currentDogID: 1,
     

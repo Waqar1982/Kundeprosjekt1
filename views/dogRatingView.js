@@ -1,21 +1,19 @@
 function dogRating() {
     
-
     let html=""
-   let dogID = model.inputs.currentDogID;
-   /* if(idInput && idInput < model.data.dogs.length+1) {
+    dogID = model.inputs.currentDogID;
+    /* if(idInput && idInput < model.data.dogs.length+1) {
         dogID = idInput
     }*/
     //let dog = model.data.dogs[dogID-1];
     const dog=model.data.dogs.find(element=>element.id==dogID)
-   html += /*html*/ `
-   
     
-   
+    html += /*html*/ `
+    
     <h2>${dog.name}<h2>
-    <button onclick="dogRating()"style="cursor: pointer;">Tilbake</button>
+    <button onclick="changeRatingDog(dogID-1)"style="cursor: pointer;">Tilbake</button>
     <img src=${dog.picture}>
-    <button onclick="dogRating()"style="cursor: pointer;">Gå til neste</button>
+    <button onclick="changeRatingDog(dogID+1)"style="cursor: pointer;">Gå til neste</button>
     <div id="stars">${printStars(dog.id)}</div>
     
     <h2>Rase: ${dog.race}<h2>
@@ -34,5 +32,4 @@ function dogRating() {
 
 function updateDogRatingViewStars() {
 document.getElementById('stars').innerHTML = printStars(model.inputs.currentDogID);
-
 }
