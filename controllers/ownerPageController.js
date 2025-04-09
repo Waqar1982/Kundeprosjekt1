@@ -1,4 +1,5 @@
-// Initialiserer hundelisten hvis den ikke finnes fra før
+// Initialiserer hundelisten hvis den ikke finnes fra før 
+// *HUSK Å ENDRE*
 let dogs = JSON.parse(localStorage.getItem('dogs')) || [];
 
 // Legger til variabler som holder styr på om feltene er gyldige
