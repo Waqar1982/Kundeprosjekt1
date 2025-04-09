@@ -1,5 +1,5 @@
 function ownerPageView() {
-  loadBio(); // Laste inn bio fra loclStorage
+
   loadDogs(); // Laste inn eksisterende hunder fra localStorage
 let html =""
 
@@ -77,7 +77,20 @@ html += /*html*/ `
     
   `;
 
+  document.getElementById('app').innerHTML = html; 
 
+  loadBio();
+  }
+
+  function loadBio() {
+    const savedBio = localStorage.getItem('bio');
+    if (savedBio) {
+      const bioTextarea = document.getElementById('bioOwner');
+      if (bioTextarea) {
+        bioTextarea.value = savedBio;
+      }
+    }
+  }
   dogs.forEach(dog => {
     const confirmBtn = document.getElementById(`confirm-delete-${dog.name}`);
     const cancelBtn = document.getElementById(`cancel-delete-${dog.name}`);
@@ -87,12 +100,7 @@ html += /*html*/ `
     if (cancelBtn) cancelBtn.style.display = 'none';  // Skjuler avbryt-slett-knappen
     if (dogDiv) dogDiv.style.border = 'none'; // Fjern eventuell rød kant
   });
-  return html
-}
-function loadBio() {
-  const savedBio = localStorage.getItem('bio');
-  if (savedBio) {
-    document.getElementById('bioOwner').value = savedBio;
-  }
- 
-}
+  // return html
+
+
+
