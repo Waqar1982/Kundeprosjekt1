@@ -35,11 +35,12 @@ inputs: {
     },
    
     createUser: {
-        username: '',
+        
         password: '',
         email: '',
         firstName: '',
         lastName: '',
+        number: null,
     },
 
     newUser: {
@@ -75,6 +76,7 @@ data: {
         lastName: 'Admin',
         password: 'admin',
         email: 'admin@admin.no',
+        phone: 12345,
         profilePicture: '',
         dogList: [],
         info: 'Admin',
@@ -86,6 +88,7 @@ data: {
         lastName: 'User',
         password: 'test',
         email: 'dummyuser@gmail.com',
+        phone: 12345,
         profilePicture: '',
         dogList: [],
         info: 'Test User. Please Ignore.',

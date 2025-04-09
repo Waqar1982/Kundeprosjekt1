@@ -16,27 +16,30 @@ function registerUser(firstName, lastName, email, phone) {
         alert("E-Post må inneholde @.");
         return;
     }
-    if (!isValidPhone(phone)) {
-        alert("Telefonnummer må kun inneholde tall.");
-        return;
-    }
+   // if (!isValidPhone(phone)) {
+    //    alert("Telefonnummer må kun inneholde tall.");
+     //   return;
+    //}
 
     const newUser = {
         userID: model.data.users.length + 1,
         adminUser: false,
         firstName: firstName,
         lastName: lastName,
-        password: '',
+        password: model.inputs.createUser.password,
         email: email,
         phone: phone,
         profilePicture: '',
+        dogList: [],
         info: 'Ny bruker',
+        dogRatings: [],
     };
 
     model.data.users.push(newUser);
     model.app.currentUserId = newUser.userID;
 
     console.log("Ny bruker registrert og logget inn:", newUser);
+    clearCreateUserInput();
     changePage('dashboard');
 }
 
@@ -46,4 +49,11 @@ function getAllUsers() {
 
 function getUserById(userId) {
     return model.data.users.find((user) => user.userID === userId);
+}
+function clearCreateUserInput (){
+model.inputs.createUser.password = '';
+model.inputs.createUser.email = '';
+model.inputs.createUser.firstName = '';
+model.inputs.createUser.lastName = '';
+model.inputs.createUser.number = '';
 }

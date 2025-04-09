@@ -1,15 +1,15 @@
 function handleUserRegistration() {
     
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
+ const firstName = model.inputs.createUser.firstName
+ const lastName =  model.inputs.createUser.lastName
+ const email = model.inputs.createUser.email
+ const phone = model.inputs.createUser.phone
 
     // Bruk registerUser-funksjonen fra userController.js
     registerUser(firstName, lastName, email, phone);
 }
 
-changePage('dashboard');
+
 
 
 
