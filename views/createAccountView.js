@@ -1,6 +1,7 @@
 function createAccountView() {
-    
-    app.innerHTML = /*HTML*/ `
+    let html = ""
+
+    html += /*html*/ `
         <style>
     .form-container {
         display: flex;
@@ -32,8 +33,8 @@ function createAccountView() {
     <input type="text" id="email" placeholder="E-Post" style= "width: 50%;">
     <input type="text" id="password" placeholder="Passord" style= "width: 50%;">
     <input type="text" id="phone" placeholder="Telefonnummer" style= "width: 50%;">
-    <button onclick="registerUser()" style= "width: 50%;">Registrer</button>
-   
+    <button onclick="handleUserRegistration()" style= "width: 50%;">Registrer</button>
 </div>
-`
+`;
+ return html
 }
