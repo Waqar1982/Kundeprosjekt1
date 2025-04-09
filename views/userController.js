@@ -1,32 +1,9 @@
-function handleUserRegistration() {
-    
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-
-    // Bruk registerUser-funksjonen fra userController.js
-    registerUser(firstName, lastName, email, phone);
-}
-
-changePage('dashboard');
-
-
-
-
-/*function registerUser() {
-
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-
-   
+// Funksjon for å registrere en ny bruker
+function registerUser(firstName, lastName, email, phone) {
     const isValidName = (name) => /^[A-Za-z]+$/.test(name);
     const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
     const isValidPhone = (phone) => /^\d+$/.test(phone);
 
-    
     if (!isValidName(firstName)) {
         alert("Fornavn må kun inneholde bokstaver.");
         return;
@@ -57,9 +34,16 @@ changePage('dashboard');
     };
 
     model.data.users.push(newUser);
-
     model.app.currentUserId = newUser.userID;
-    console.log("Ny bruker registrert og logget inn:", newUser);
 
+    console.log("Ny bruker registrert og logget inn:", newUser);
     changePage('dashboard');
-}*/
+}
+
+function getAllUsers() {
+    return model.data.users;
+}
+
+function getUserById(userId) {
+    return model.data.users.find((user) => user.userID === userId);
+}

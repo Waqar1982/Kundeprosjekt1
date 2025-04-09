@@ -40,6 +40,18 @@ inputs: {
         lastName: '',
     },
 
+    newUser: {
+        userID: null,
+        adminUser: false,
+        firstName: '',
+        lastName: '',
+        password: '',
+        email: '',
+        phone: '',
+        profilePicture: '',
+        info: 'Ny bruker',
+    },
+
     myProfile: {
         myInfo: '',
         newDog: '',
