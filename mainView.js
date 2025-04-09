@@ -8,7 +8,7 @@ function header(){
   <button onclick= "changePage('ratingPage')">DogRatingView</button>
   <button onclick= "changePage('ownerPage')">OwnerPagerView</button>
   <button onclick= "changePage('topLists')">TopListsView</button>
-  <button onclick= "createAccountView()">CreateAccountView</button>
+  <button onclick= "changePage('createPage')">CreateAccountView</button>
   ${profileButtonHTML}
   ${searchView()}
   `
@@ -39,6 +39,8 @@ function chosenview(){
     return ownerPageView()
   }else if (model.app.currentPage==model.app.page[6]){
     return topListsView()
+  }else if (model.app.currentPage==model.app.page[7]){
+    return createAccountView()
   }
 }
 function changePage(newPage){
