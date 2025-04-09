@@ -14,6 +14,7 @@ app:{
         'ownerPage',
         'dogPage',
         'topLists',
+        'createPage',
         'search']
 },
 
