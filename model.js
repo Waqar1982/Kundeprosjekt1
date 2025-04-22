@@ -130,6 +130,7 @@ data: {
         all: [1,2,3,4,5,6,7,8,9,10],
         small: [3, 5, 10, 11, 12],
         big: [2, 4, 6, 7, 8],
+        puppies: [],
         shiba: [],
         labrador: [],
         mix: [],
@@ -157,8 +158,8 @@ data: {
         topList: [],
     },], */
 
-    nyheter: [],
-
+    nyheter: ["Denne ukas hunderase er Shiba Inu", "Intervju med eieren av dagens hund.",
+        "Se hunder oppe til adopsjon nær deg.", "7 hunder har bursdag i dag: De er ______"],
+        //Eksempel-nyheter
 },
-
 }
