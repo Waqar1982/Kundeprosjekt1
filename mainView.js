@@ -3,12 +3,12 @@ function header(){
   let profileButtonHTML = model.app.currentUserId == null ? "" : profileButton()
   return/*HTML*/`
    
-  <button onclick= "changePage('dashboard')">DashboardView</button> 
-  <button onclick= "changePage('dogPage')">dogPageView</button>
-  <button onclick= "changePage('ratingPage')">DogRatingView</button>
-  <button onclick= "changePage('ownerPage')">OwnerPagerView</button>
-  <button onclick= "changePage('topLists')">TopListsView</button>
-  <button onclick= "changePage('createPage')">CreateAccountView</button>
+  <button onclick= "changePage('dashboard')">Dashboard</button> 
+  <button onclick= "changePage('dogPage')">Dog Page</button>
+  <button onclick= "changePage('ratingPage')">Dog Rating</button>
+  <button onclick= "changePage('ownerPage')">Owner Pager</button>
+  <button onclick= "changePage('topLists')">Top Lists</button>
+  <button onclick= "changePage('createPage')">Create Account</button>
   ${profileButtonHTML}
   ${searchView()}
   `
