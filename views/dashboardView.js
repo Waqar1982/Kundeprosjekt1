@@ -6,7 +6,7 @@ function dashboardViewFunction() {
   
     
     ${logInMenu}
-    <h1>Dashboard</h1>
+    
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
     <img src="dogpictures/dog1.avif" alt="Dagens Hund" onclick="changeCurrentDog(1)">
