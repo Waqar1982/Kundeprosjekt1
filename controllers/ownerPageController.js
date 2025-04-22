@@ -1,6 +1,6 @@
 // Initialiserer hundelisten hvis den ikke finnes fra før 
 // *HUSK Å ENDRE*
-let dogs = JSON.parse(localStorage.getItem('dogs')) || [];
+// let dogs = JSON.parse(localStorage.getItem('dogs')) || [];
 
 // Legger til variabler som holder styr på om feltene er gyldige
 let invalidName = false;
@@ -8,49 +8,27 @@ let invalidImage = false;
 
 // Lagrer og henter bio fra localStorage
 function saveBio() {
-    const bioText = document.getElementById('bioOwner').value;
-    localStorage.setItem('bio', bioText);
+    // const bioText = document.getElementById('bioOwner').value;
+    // localStorage.setItem('bio', bioText);
 }
-
-function loadBio() {
-    const savedBio = localStorage.getItem('bio');
-    if (savedBio) {
-       // document.getElementById('bioOwner').value = savedBio;
-    }
+function saveDogName(newName) {
+model.inputs.newDog.name = newName;
 }
 
 // Lagrer og henter hunder fra localStorage
 function saveDogs() {
-    localStorage.setItem('dogs', JSON.stringify(dogs));
+    // localStorage.setItem('dogs', JSON.stringify(dogs));
 }
 
-function loadDogs() {
-    dogs = JSON.parse(localStorage.getItem('dogs')) || [];
-}
 
 // Viser skjemaet for å legge til ny hund
-function showAddDogForm() {
-    if (!document.getElementById('addDogForm')) {
-    const formHtml = `
-    <div id="addDogForm" style="position: fixed; top: 20%; left: 30%; background: white; padding: 20px; border-radius: 10px;">
-    <h2>Legg til en ny hund</h2>
-    <input type="text" id="newDogName" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" id="newDogImage" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
-    <button onclick="addDog()" style="padding: 5px 10px;">Legg til</button>
-    <button onclick="closeAddDogForm()" style="padding: 5px 10px; margin-left: 10px;">Avbryt</button>
-    </div>
-    `;
-    document.body.insertAdjacentElement('beforeend', formHtml);
-} else {
-    document.getElementById('addDogForm').style.display = 'block';
-}
-}
+
 
 // Skjuler skjemaet for å legge til ny hund
-function closeAddDogForm() {
-    const form = document.getElementById('addDogForm');
-    if (form) form.style.display = 'none';
-}
+// function closeAddDogForm() {
+//     const form = document.getElementById('addDogForm');
+//     if (form) form.style.display = 'none';
+// }
 
 // Legger til en ny hund og oppdaterer visningen med visuell feilmelding
 function addDog() {

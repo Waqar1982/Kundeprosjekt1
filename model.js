@@ -3,7 +3,7 @@ const app = document.getElementById('app')
 const model = {
 
 app:{
-    currentUserId: null,
+    currentUserId: 1,
     currentPage: 'dashboard', // 
 
     page: [
@@ -55,6 +55,15 @@ inputs: {
         info: 'Ny bruker',
     },
 
+    newDog: {
+    name: '',
+    image: '',
+    rase: '',
+    size: '',
+    age: '',
+    favoriteFood: '',
+    },
+
     myProfile: {
         myInfo: '',
         newDog: '',
@@ -71,6 +80,7 @@ inputs: {
 data: {
     users: [
         {userID: 1,
+        bio: 'Dette er min bio', 
         adminUser: true,
         firstName: 'Mister',
         lastName: 'Admin',
@@ -78,11 +88,12 @@ data: {
         email: 'admin@admin.no',
         phone: 12345,
         profilePicture: '',
-        dogList: [],
+        dogList: [4, 5, 6],
         info: 'Admin',
         dogRatings: [{id: 1, rating: 4.5}]},
 
         {userID: 5,
+        bio: 'Dette er min bio', 
         adminUser: false,
         firstName: 'Test',
         lastName: 'User',
@@ -90,7 +101,7 @@ data: {
         email: 'dummyuser@gmail.com',
         phone: 12345,
         profilePicture: '',
-        dogList: [],
+        dogList: [1, 2, 3],
         info: 'Test User. Please Ignore.',
         dogRatings: [{id: 1, rating: 4.5}]}
     ],
