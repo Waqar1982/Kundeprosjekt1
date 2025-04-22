@@ -158,7 +158,7 @@ data: {
         topList: [],
     },], */
 
-    nyheter: ["Denne ukas hunderase er Shiba Inu", "Intervju med eieren av dagens hund.",
+    news: ["Denne ukas hunderase er: Shiba Inu", "Intervju med eieren av dagens hund: testnavn1.",
         "Se hunder oppe til adopsjon nær deg.", "7 hunder har bursdag i dag: De er ______"],
         //Eksempel-nyheter
 },

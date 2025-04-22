@@ -3,8 +3,6 @@ function dashboardViewFunction() {
     let logInMenu = model.app.currentUserId == null ? logInView() : ""
     html += /*HTML*/ `
 
-  
-    
     ${logInMenu}
     
     <div id="todaysDog">
@@ -13,7 +11,9 @@ function dashboardViewFunction() {
     ${printStars(model.data.dogs[0].id)}
     </div>
 
-    <input type="text" id="newsBox" placeholder="Nyheter!" style="height:350px;  border-radius: 5px; ">
+    <div type="text" id="newsBox" placeholder="Nyheter!" style="height:350px;  border: 3px solid black; padding: 30px;">
+    ${printNews()}</div>
+
     <div id="top5Dogs">
     <h2>Topp 5 hunder</h2>
     <div>${printDogs()}</div>
@@ -32,11 +32,27 @@ function printDogs (){
         top2 = 305 + 180*i
         html += `
         <div>
-        <img src="${dog.picture}" onclick="changeCurrentDog(${dog.id})" alt="Hundebilde" style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
+        <img src="${dog.picture}" onclick="changeCurrentDog(${dog.id})" alt="Hundebilde" 
+        style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
         <div class="stars" style="position: absolute; top: ${top2}px; left: 60px; color: gold;">
         ${printStars(dog.id)}
         </div>
         </div>
+        `
+    }
+    return html
+}
+
+function printNews (){
+    let feed = model.data.news
+    let html="<h2>Nyheter</h2>"
+
+    for (i=0; i<feed.length; i++) {
+        html += `
+        <div>
+        ${feed[i]}
+        </div>
+        <br>
         `
     }
     return html
