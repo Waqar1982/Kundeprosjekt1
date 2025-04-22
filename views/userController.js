@@ -41,8 +41,7 @@ function registerUser(firstName, lastName, email, phone) {
     console.log("Ny bruker registrert og logget inn:", newUser);
     clearCreateUserInput();
     app.innerHTML = `<h1>Bruker Laget</h1>
-    <button onclick="changePage('dashboard')">Tilbake til forsiden</button>`
-    ;
+    <button onclick="changePage('dashboard')">Tilbake til forsiden</button>`;
 }
 
 function getAllUsers() {
