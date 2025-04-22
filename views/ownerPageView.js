@@ -27,8 +27,7 @@ html += /*html*/ `
     <!-- Legg til ny hund -->
           
     <!-- Skjema for å legge til ny hund (skjult som standard) -->
-    <div id="addDogForm" style= "background: white; padding 20px; border-radius: 10px; margin-top: 20px;">
-      <h2>Legg til en ny hund</h2>
+    <div  style= "background: white; padding 200px; border-radius: 10px; margin-top: 20px;">
        ${showAddDogForm(currentUser.userID)}
       </div>
 
@@ -60,31 +59,31 @@ html += /*html*/ `
 
   for(let i = 0; i < dogList.length; i++) {
     let dog = dogList[i];
-    // Endre alle dog til doglist[i]
     html+=/*html*/`
-    <div id="dog-${dogList[i].name}" style="text-align: center; margin-bottom: 20px;">
-    <button onclick="viewDog('${dog.name}')" style="padding: 5px 10px; margin-bottom: 5px;">${dog.name}</button>
+    <div style="text-align: center; margin-bottom: 20px;">
+    <button onclick="viewDog('${dogList[i].id}')" class="viewDogBtn" style="padding: 5px 10px; margin-bottom: 5px;">${dogList[i].name}</button>
     <br>
-    <img src="${dog.imageURL}" style="width: 200px; border-radius: 10px;">
+    <img src="${dogList[i].image}" style="width: 200px; border-radius: 10px;">
     <br>
-    <button id="delete-${dog.name}" onclick="askDeleteDog('${dog.name}')" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
-    <button id="confirm-delete-${dog.name}" onclick="deleteDog('${dog.name}')" style="display: none; padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-top: 5px;">Bekreft slett</button>
-    <button id="cancel-delete-${dog.name}" onclick="cancelDeleteDog('${dog.name}')" style="display: none; padding: 5px 10px; background-color: gray; color: white; border: none; border-radius: 5px; margin-top: 5px;">Avbryt</button>
-
+    <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
   </div>
 
     `;
   }
   return html;
   }
-  // Lag input for hver input, med onchange
   function showAddDogForm(id) {
     const formHtml = /*html*/ `
-    <div id="addDogForm" style="position: fixed; top: 20%; left: 30%; background: white; padding: 20px; border-radius: 10px;">
+    <div  style= "background: white; padding: 20px; border-radius: 10px;">
     <h2>Legg til en ny hund</h2>
     
-    <input type="text" onchange="saveDogName(this.value)" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" onchange="saveDogImage(this.value)" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
+    <input type="text" onchange="model.inputs.newDog.name=this.value" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
+    <input type="text" onchange="model.inputs.newDog.image=this.value" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
+    <input type="text" onchange="smodel.inputs.newDog.rase=this.value" placeholder="Rase" style="padding: 5px; margin-bottom: 10px;">
+    <input type="text" onchange="model.inputs.newDog.size=this.value" placeholder="Størrelse" style="padding: 5px; margin-bottom: 10px;">
+    <input type="text" onchange="model.inputs.newDog.age=this.value" placeholder="Alder" style="padding: 5px; margin-bottom: 10px;">
+    <input type="text" onchange="model.inputs.newDog.favoriteFood=this.value" placeholder="Favorittmat" style="padding: 5px; margin-bottom: 10px;">
+    
     <button onclick="addDog(${id})" style="padding: 5px 10px;">Legg til</button>
     </div>
     `;
