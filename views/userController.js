@@ -5,15 +5,15 @@ function registerUser(firstName, lastName, email, phone) {
     const isValidPhone = (phone) => /^\d+$/.test(phone);
 
     if (!isValidName(firstName)) {
-        alert("Fornavn må kun inneholde bokstaver.");
+        alert("Fornavn skal kun inneholde bokstaver.");
         return;
     }
     if (!isValidName(lastName)) {
-        alert("Etternavn må kun inneholde bokstaver.");
+        alert("Etternavn skal kun inneholde bokstaver.");
         return;
     }
     if (!isValidEmail(email)) {
-        alert("E-Post må inneholde @.");
+        alert("Ikke gyldig e-postadresse. E-Post må inneholde '@' og domene.");
         return;
     }
    // if (!isValidPhone(phone)) {
@@ -40,7 +40,9 @@ function registerUser(firstName, lastName, email, phone) {
 
     console.log("Ny bruker registrert og logget inn:", newUser);
     clearCreateUserInput();
-    changePage('dashboard');
+    app.innerHTML = `<h1>Bruker Laget</h1>
+    <button onclick="changePage('dashboard')">Tilbake til forsiden</button>`
+    ;
 }
 
 function getAllUsers() {
