@@ -61,12 +61,22 @@ function displayDogs(owner) {
     let dog = dogList[i];
     html+=/*html*/`
     <div style="text-align: center; margin-bottom: 20px;">
+<<<<<<< Updated upstream
       <button onclick="viewDog('${dogList[i].id}')" class="viewDogBtn">${dogList[i].name}</button>
       <br>
       <img src="${dogList[i].picture}" style="width: 200px; border-radius: 10px;">
       <br>
       <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn">Slett</button>
     </div>
+=======
+    <button onclick="viewDog('${dogList[i].id}')" class="viewDogBtn">${dogList[i].name}</button>
+    <br>
+    <img src="${dogList[i].picture}" style="width: 200px; border-radius: 10px;">
+    <br>
+    <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn">Slett</button>
+  </div>
+
+>>>>>>> Stashed changes
     `;
   }
   return html;

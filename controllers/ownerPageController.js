@@ -5,7 +5,8 @@
 // Legger til variabler som holder styr på om feltene er gyldige
 
 // Lagrer og henter bio fra localStorage
-function saveBio() {
+function saveBio(newBio) {
+    model.data.users.bio = newBio;
     // const bioText = document.getElementById('bioOwner').value;
     // localStorage.setItem('bio', bioText);
 }
