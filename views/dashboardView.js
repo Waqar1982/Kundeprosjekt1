@@ -28,15 +28,15 @@ function printDogs (){
    let html=""
 
     for (i=0; i<5; i++) {
-        dog = dogs[i]
+        dogi = dogs[i]
         top1 = 120 + 180*i
         top2 = 305 + 180*i
         html += `
         <div>
-        <img src="${dog.picture}" onclick="changeCurrentDog(${dog.id})" alt="Hundebilde" 
+        <img src="${dogi.picture}" onclick="changeCurrentDog(${dogi.id})" alt="Hundebilde" 
         style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
         <div class="stars" style="position: absolute; top: ${top2}px; left: 60px; color: gold;">
-        ${printStars(dog.id)}
+        ${printStars(dogi.id)}
         </div>
         </div>
         `
