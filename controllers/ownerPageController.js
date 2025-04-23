@@ -57,7 +57,7 @@ updateview();
     function deleteDog(dogId) {
     console.log('dogId',dogId)
     let currentUser = model.data.users.find(user=>user.userID==model.app.currentUserId)
-    // går igjennom lista til currentuser
+    // går igjennom lista av hunder til currentuser
     for(let i = 0; i < currentUser.dogList.length; i++) {
         if(currentUser.dogList[i]==dogId) {
         currentUser.dogList.splice(i,1)
@@ -70,10 +70,6 @@ updateview();
     }
     
     updateview();
-    
-  // Gå igjennom hundelista/model.data.dogs, slette med riktig id
-  // Slette riktig id fra loggedin user sin doglist, bruke .find()
-  // Oppdaterview
 }
 
 // Viser detaljer for en bestemt hund
