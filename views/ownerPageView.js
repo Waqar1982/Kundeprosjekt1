@@ -11,7 +11,7 @@ html += /*html*/ `
     <!-- PROFIL -->
     <div style="display: flex; justify-content: flex-end; padding-right: 20px; margin-bottom: 20px;">
       <button onclick="myProfile()" 
-        style="padding: 10px; font-size: 12px;">
+      class="myProfileBtn">
         Min profil
       </button>
       <h1>Velkommen ${currentUser.firstName}</h1>
@@ -61,11 +61,11 @@ html += /*html*/ `
     let dog = dogList[i];
     html+=/*html*/`
     <div style="text-align: center; margin-bottom: 20px;">
-    <button onclick="viewDog('${dogList[i].id}')" class="viewDogBtn" style="padding: 5px 10px; margin-bottom: 5px;">${dogList[i].name}</button>
+    <button onclick="viewDog('${dogList[i].id}')" class="viewDogBtn">${dogList[i].name}</button>
     <br>
     <img src="${dogList[i].image}" style="width: 200px; border-radius: 10px;">
     <br>
-    <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn" style="padding: 5px 10px; margin-top: 5px; background-color: red; color: white; border: none; border-radius: 5px;">Slett</button>
+    <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn">Slett</button>
   </div>
 
     `;
@@ -84,7 +84,7 @@ html += /*html*/ `
     <input type="text" onchange="model.inputs.newDog.age=this.value" placeholder="Alder" style="padding: 5px; margin-bottom: 10px;">
     <input type="text" onchange="model.inputs.newDog.favoriteFood=this.value" placeholder="Favorittmat" style="padding: 5px; margin-bottom: 10px;">
     
-    <button onclick="addDog(${id})" style="padding: 5px 10px;">Legg til</button>
+    <button onclick="addDog(${id})" class="viewDogBtn">Legg til</button>
     </div>
     `;
    return formHtml;
