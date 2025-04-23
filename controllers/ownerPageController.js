@@ -53,7 +53,12 @@ updateview();
 
 }
 
-    function deleteDog(id) {
+    function deleteDog(userID) {
+    for(let i = 0; i > model.data.dogs.length; i++) {
+        let userDelete = model.inputs.newDog.find(user=>user.newDog==userID);
+        model.inputs.newDog.splice(userID);
+    }updateview();
+    
   // Gå igjennom hundelista/model.data.dogs, slette med riktig id
   // Slette riktig id fra loggedin user sin doglist, bruke .find()
   // Oppdaterview
