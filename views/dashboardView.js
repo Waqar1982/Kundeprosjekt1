@@ -11,7 +11,8 @@ function dashboardViewFunction() {
     ${printStars(model.data.dogs[0].id)}
     </div>
 
-    <div type="text" id="newsBox" placeholder="Nyheter!" style="height:350px;  border: 3px solid black; padding: 30px;">
+    <div type="text" id="newsBox" placeholder="Nyheter!" 
+    style="height:350px; border: 3px solid black; padding: 30px;">
     ${printNews()}</div>
 
     <div id="top5Dogs">
