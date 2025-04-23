@@ -1,7 +1,7 @@
 function dogPageView() {   //ta inn input her senere
     let html=""
 
-    let dog = model.data.dogs.find(element=>element.id==model.inputs.currentDogID)
+    dog = model.data.dogs.find(element=>element.id==model.inputs.currentDogID)
     html += /*HTML*/ `
    
     <br> <br>

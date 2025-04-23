@@ -53,10 +53,16 @@ updateview();
 
 }
 
-    function deleteDog(userID) {
-    for(let i = 0; i > model.data.dogs.length; i++) {
-        let userDelete = model.inputs.newDog.find(user=>user.newDog==userID);
-        model.inputs.newDog.splice(userID);
+    function deleteDog(dogId) {
+    let dogToDelete = model.data.dogs.find(dog=>dog.id==dogId)
+    let currentUser = model.data.users.find(user=>user.userID==model.app.currentUserId)
+    for(let i = 0; i > currentUser.dogList.length; i++) {
+        console.log("kjører loop")
+        if(currentUser.dogList[i]==dogId) {
+            console.log(dogToDelete.id,currentUser.dogList[i])
+        currentUser.dogList.splice(currentUser.dogList[i])
+        model.data.dogs.splice(dogToDelete)
+        }
     }updateview();
     
   // Gå igjennom hundelista/model.data.dogs, slette med riktig id
