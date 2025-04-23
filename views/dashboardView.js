@@ -29,13 +29,13 @@ function printDogs (){
 
     for (i=0; i<5; i++) {
         dogi = dogs[i]
-        top1 = 120 + 180*i
-        top2 = 305 + 180*i
+        top1 = 50 + 180*i
+        top2 = 235 + 180*i
         html += `
         <div>
         <img src="${dogi.picture}" onclick="changeCurrentDog(${dogi.id})" alt="Hundebilde" 
-        style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
-        <div class="stars" style="position: absolute; top: ${top2}px; left: 60px; color: gold;">
+        style="position: absolute; top: ${top1}px; left: 0px; height: 150px;">
+        <div class="stars" style="position: absolute; top: ${top2}px; left: 38px; color: gold;">
         ${printStars(dogi.id)}
         </div>
         </div>
