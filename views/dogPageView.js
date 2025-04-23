@@ -1,16 +1,14 @@
 function dogPageView() {   //ta inn input her senere
     let html=""
 
-  
-   let dog = model.data.dogs.find(element=>element.id==model.inputs.currentDogID)
+    let dog = model.data.dogs.find(element=>element.id==model.inputs.currentDogID)
     html += /*HTML*/ `
    
-     <br> <br>
-    <button onclick="ownerPageView()">Eiers profil</button> <br>
+    <br> <br>
+    <button onclick="goToOwner()">Eiers profil</button> <br>
     <h2>${dog.name}</h2>
     <div class='row'>
         <div class='column1'>
-           
             <img src=${dog.picture} alt="Aikos profil bilde" style="width: 400px; height: 400px;">
             ${printStars(dog.id)}
         </div>
@@ -25,12 +23,16 @@ function dogPageView() {   //ta inn input her senere
         </div>
     </div>
  
- 
-    <br> <br>
+    <br><br>
    
     <input id="breed" type="text" placeholder="Her kan du skrive hva du vil">
     `
     return html
+}
+
+function goToOwner() {
+    model.inputs.ownerID = dog.owner
+    changePage('ownerPage')
 }
 
 // Må legge in beskrivelse i modellen for ${dog.desc} */

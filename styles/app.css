@@ -1,8 +1,9 @@
 body {
     font-family: arial, sans-serif;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 80px;
 }
+
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
@@ -16,8 +17,6 @@ body.dark-mode #newsBox {
     border-color: #444;
 }
 
-
-
 #loginBox {
     position: absolute;
     top: 10px;
@@ -29,14 +28,11 @@ body.dark-mode #newsBox {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
-    
 }
 
 .input-error {
     border: 2px solid red;
 }
-
 
 #topLeft {
     position: absolute;
@@ -77,10 +73,10 @@ body.dark-mode #newsBox {
     cursor: pointer;
     }
 
- .star{
+.star{
     color:lightgrey;
     transform: color 0.2s;
- }   
+}   
 
 .star:hover,
 .star.selected {

@@ -2,7 +2,7 @@ updateview()
 function header(){
   let profileButtonHTML = model.app.currentUserId == null ? "" : profileButton()
   return/*HTML*/`
-   
+  <div id= "topLeft"> 
   <button onclick= "changePage('dashboard')">Dashboard</button> 
   <button onclick= "changePage('dogPage')">Dog Page</button>
   <button onclick= "changePage('ratingPage')">Dog Rating</button>
@@ -11,6 +11,7 @@ function header(){
   <button onclick= "changePage('createPage')">Create Account</button>
   ${profileButtonHTML}
   ${searchView()}
+  </div>
   `
   
 }
