@@ -8,6 +8,7 @@ function dashboardViewFunction() {
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
     <img src="dogpictures/dog1.avif" alt="Dagens Hund" onclick="changeCurrentDog(1)">
+    <div>${model.data.dogs[0].name}</div> <br>
     ${printStars(model.data.dogs[0].id)}
     </div>
 
@@ -29,13 +30,13 @@ function printDogs (){
 
     for (i=0; i<5; i++) {
         dogi = dogs[i]
-        top1 = 120 + 180*i
-        top2 = 305 + 180*i
+        top1 = 50 + 185*i
+        top2 = 220 + 185*i
         html += `
         <div>
         <img src="${dogi.picture}" onclick="changeCurrentDog(${dogi.id})" alt="Hundebilde" 
-        style="position: absolute; top: ${top1}px; left: 10px; height: 150px;">
-        <div class="stars" style="position: absolute; top: ${top2}px; left: 60px; color: gold;">
+        style="position: absolute; top: ${top1}px; left: 0px; height: 150px;">
+        <div class="stars" style="position: absolute; top: ${top2}px; left: 23px; color: gold;">
         ${printStars(dogi.id)}
         </div>
         </div>
