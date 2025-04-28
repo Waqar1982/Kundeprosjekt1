@@ -1,15 +1,15 @@
 function saveUsernameInput(username){
-model.inputs.loggInn.userName = username;
+    model.inputs.loggInn.userName = username;
 }
+
 function savePasswordInput(password){
     model.inputs.loggInn.password = password;
-    }
+}
 
 
 function logIn() {
     const username = document.querySelector('#username');
     const password = document.querySelector('#password');
-
 
     password.classList.remove('input-error');
     username.classList.remove('input-error');
@@ -30,7 +30,7 @@ function logIn() {
        username.classList.add('input-error'); // Legg til rød kant på brukernavn
        password.classList.add('input-error'); // Legg til rød kant passord
        return;
-   }*/
+    }*/
 else if (findUser && findPassword) {
     console.log("kjørerelse")
     for(let i = 0; i< model.data.users.length; i++){
@@ -70,9 +70,7 @@ function validatePassword(username, password) {
     const validCredentials = {
         'user1@example.com': 'password123',
         'user2@example.com': 'password456'
-        
     };
-    
     return validCredentials[username] === password;
 }
 

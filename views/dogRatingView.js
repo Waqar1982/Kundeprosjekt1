@@ -31,5 +31,5 @@ function dogRating() {
 // Update the stars in dogRatingView after clicking on stars in ratingStarsView
 
 function updateDogRatingViewStars() {
-document.getElementById('stars').innerHTML = printStars(model.inputs.currentDogID);
+    document.getElementById('stars').innerHTML = printStars(model.inputs.currentDogID);
 }
