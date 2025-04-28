@@ -3,15 +3,16 @@ function header(){
   let profileButtonHTML = model.app.currentUserId == null ? "" : profileButton()
   return/*HTML*/`
   <div id= "topLeft"> 
-  <button onclick= "changePage('dashboard')">Dashboard</button> 
-  <button onclick= "changePage('dogPage')">Dog Page</button>
-  <button onclick= "changePage('ratingPage')">Dog Rating</button>
-  <button onclick= "changePage('ownerPage')">Owner Pager</button>
-  <button onclick= "changePage('topLists')">Top Lists</button>
-  <button onclick= "changePage('createPage')">Create Account</button>
-  <button id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
-  ${profileButtonHTML}
-  ${searchView()}
+  <button class="nav" onclick= "changePage('dashboard')">Dashboard</button> 
+  <button class="nav" onclick= "changePage('dogPage')">Dog Page</button>
+  <button class="nav" onclick= "changePage('ratingPage')">Dog Rating</button>
+  <button class="nav" onclick= "changePage('ownerPage')">Owner Pager</button>
+  <button class="nav" onclick= "changePage('topLists')">Top Lists</button>
+  <button class="nav" onclick= "changePage('createPage')">Create Account</button>
+  <button class="nav" id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
+  <button class="nav" onclick= "changePage('profil')">Profil</button>
+
+
   </div>
   `
   
