@@ -39,7 +39,12 @@
     
   }
   
-  
+  .nav.loggAv{
+    position: absolute;
+    right: -1350px;
+    
+   
+  }
   
   
   .nav:hover, .dropdown:hover .dropbtn {
