@@ -9,6 +9,7 @@ function header(){
   <button onclick= "changePage('ownerPage')">Owner Pager</button>
   <button onclick= "changePage('topLists')">Top Lists</button>
   <button onclick= "changePage('createPage')">Create Account</button>
+  <button id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
   ${profileButtonHTML}
   ${searchView()}
   </div>
@@ -66,5 +67,11 @@ function profileButton() {
   <button id="profileButton" onclick="changePage('profil')">Profil</button>
   `
 }
+
+function toggleDarkMode() {
+
+  document.body.classList.toggle('dark-mode');
+  
+  }
 
 
