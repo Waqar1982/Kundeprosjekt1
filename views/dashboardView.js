@@ -1,4 +1,5 @@
 function dashboardViewFunction() {
+    dogToday = model.data.dogs[0]
     let html=""
     let logInMenu = model.app.currentUserId == null ? logInView() : ""
     html += /*HTML*/ `
@@ -7,9 +8,9 @@ function dashboardViewFunction() {
     
     <div id="todaysDog">
     <h2 style="margin: 0; text-align: center;">Dagens Hund:</h2>
-    <img src="dogpictures/dog1.avif" alt="Dagens Hund" onclick="changeCurrentDog(1)">
-    <div>${model.data.dogs[0].name}</div> <br>
-    ${printStars(model.data.dogs[0].id)}
+    <img src="${dogToday.picture}" alt="Dagens Hund" onclick="changeCurrentDog(dogToday.id)">
+    <div>${dogToday.name}</div> <br>
+    ${printStars(dogToday.id)}
     </div>
 
     <div type="text" id="newsBox" placeholder="Nyheter!" 
