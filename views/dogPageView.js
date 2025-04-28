@@ -21,15 +21,18 @@ function dogPageView() {   //ta inn input her senere
             <div id='description'>Info: ${dog.info}</div> <br>
         </div>
     </div>
- 
-    <br><br>
-   
-    <input id="info" type="text" placeholder="Oppdater alder" onchange="model.inputs.updateDog.age=this.value">
-    <input id="info" type="text" placeholder="Oppdater størrelse" onchange="model.inputs.updateDog.size=this.value">
-    <input id="info" type="text" placeholder="Oppdater favorittmat" onchange="model.inputs.updateDog.favoriteFood=this.value">
-    <input id="info" type="text" placeholder="Oppdater beskrivelse" onchange="model.inputs.updateDog.info=this.value">
-    <button onclick="addInfo()">Oppdater hund</button>
     `
+    if(model.app.currentUserId == dog.owner) {
+        html += /*HTML*/ `
+        <br><br>
+        
+        <input id="info" type="text" placeholder="Oppdater alder" onchange="model.inputs.updateDog.age=this.value">
+        <input id="info" type="text" placeholder="Oppdater størrelse" onchange="model.inputs.updateDog.size=this.value">
+        <input id="info" type="text" placeholder="Oppdater favorittmat" onchange="model.inputs.updateDog.favoriteFood=this.value">
+        <input id="info" type="text" placeholder="Oppdater beskrivelse" onchange="model.inputs.updateDog.info=this.value">
+        <button onclick="addInfo()">Oppdater hund</button>
+        `
+    }
     return html
 }
 
