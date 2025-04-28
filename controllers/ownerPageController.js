@@ -1,10 +1,9 @@
 // Initialiserer hundelisten hvis den ikke finnes fra før 
 // *HUSK Å ENDRE*
-// let dogs = JSON.parse(localStorage.getItem('dogs')) || [];
-
-// Legger til variabler som holder styr på om feltene er gyldige
-
 // Lagrer og henter bio fra localStorage
+
+
+
 function saveBio(newBio) {
     model.data.users.bio = newBio;
     // const bioText = document.getElementById('bioOwner').value;
@@ -21,6 +20,7 @@ function saveBio(newBio) {
 
 // Lagrer og henter hunder fra localStorage
 function saveDogs() {
+    
     // localStorage.setItem('dogs', JSON.stringify(dogs));
 }
 
