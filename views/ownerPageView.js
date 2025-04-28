@@ -11,11 +11,12 @@ function ownerPageView() {
 
     <!-- PROFIL -->
     <div style="display: flex; justify-content: flex-end; padding-right: 20px; margin-bottom: 20px;">
-      <button onclick="myProfile()" 
-        class="myProfileBtn">
-        Min profil
+      <!--  <button onclick="myProfile()" 
+      //   class="myProfileBtn">
+      //   Min profil
       </button>
-      <h1>Velkommen ${currentUser.firstName}</h1>
+      // Endre på h1 senere/fjerne?
+       <h1>Velkommen ${currentUser.firstName} </h1> -->
     </div>
  
 
@@ -77,12 +78,12 @@ function showAddDogForm(id) {
   <div  style= "background: white; padding: 20px; border-radius: 10px;">
     <h2>Legg til en ny hund</h2>
     
-    <input type="text" onchange="model.inputs.newDog.name=this.value" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" onchange="model.inputs.newDog.image=this.value" placeholder="Bilde-URL" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" onchange="smodel.inputs.newDog.rase=this.value" placeholder="Rase" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" onchange="model.inputs.newDog.size=this.value" placeholder="Størrelse" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" onchange="model.inputs.newDog.age=this.value" placeholder="Alder" style="padding: 5px; margin-bottom: 10px;">
-    <input type="text" onchange="model.inputs.newDog.favoriteFood=this.value" placeholder="Favorittmat" style="padding: 5px; margin-bottom: 10px;">
+    <input class="addDogForm" type="text" onchange="model.inputs.newDog.name=this.value" placeholder="Hundens navn">
+    <input class="addDogForm" type="text" onchange="model.inputs.newDog.image=this.value" placeholder="Bilde-URL">
+    <input class="addDogForm" type="text" onchange="smodel.inputs.newDog.rase=this.value" placeholder="Rase">
+    <input class="addDogForm" type="text" onchange="model.inputs.newDog.size=this.value" placeholder="Størrelse">
+    <input class="addDogForm" type="text" onchange="model.inputs.newDog.age=this.value" placeholder="Alder">
+    <input class="addDogForm" type="text" onchange="model.inputs.newDog.favoriteFood=this.value" placeholder="Favorittmat">
     
     <button onclick="addDog(${id})" class="viewDogBtn">Legg til</button>
   </div>
