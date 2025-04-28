@@ -11,6 +11,7 @@ function header(){
   <button class="nav" onclick= "changePage('createPage')">Create Account</button>
   <button class="nav" id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
   <button class="nav" onclick= "changePage('profil')">Profil</button>
+  <button class="nav" onclick= "changePage('')">Logg Av</button>
 
 
   </div>
