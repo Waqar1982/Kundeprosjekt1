@@ -10,8 +10,8 @@ function ownerPageView() {
      
 
     <!-- PROFIL -->
-    <div style="display: flex; justify-content: flex-end; padding-right: 20px; margin-bottom: 20px;">
-      <!--  <button onclick="myProfile()" 
+    <!-- <div style="display: flex; justify-content: flex-end; padding-right: 20px; margin-bottom: 20px;">
+        <button onclick="myProfile()" 
       //   class="myProfileBtn">
       //   Min profil
       </button>
@@ -23,7 +23,7 @@ function ownerPageView() {
    <!-- HOVEDINNHOLD -->
     <div>
       <h1>Min Hundeside</h1>
-      <textarea placeholder="${currentUser.bio}" rows="3" style="width: 80%; padding: 10px;"></textarea>
+      <textarea class="userBio" placeholder="${currentUser.bio}" rows="3"></textarea>
     </div>
 
     <!-- Legg til ny hund -->
@@ -34,7 +34,7 @@ function ownerPageView() {
     </div>
 
     <!-- Viser lagrede hunder -->
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 30px;">
+    <div class="savedDogs">
       ${displayDogs(currentUser)}
     </div>
 
