@@ -1,4 +1,5 @@
 function dogPageView() {   //ta inn input her senere
+    model.inputs.updateDog.info = ''
     let html=""
 
     dog = model.data.dogs.find(element=>element.id==model.inputs.currentDogID)
@@ -18,14 +19,14 @@ function dogPageView() {   //ta inn input her senere
             <div id='age'>Alder: ${dog.age}</div>
             <div id='Size'>Størrelse: ${dog.size}</div>
             <div id='Favourites'>Favorittmat: ${dog.favoriteFood}</div>
-            <div id='description'>Liker å kose</div> <br>
-            <img src="" alt="Lenke til flere bilder her (hvis de finnes)">
+            <div id='description'>Info: ${dog.info}</div> <br>
         </div>
     </div>
  
     <br><br>
    
-    <input id="breed" type="text" placeholder="Her kan du skrive hva du vil">
+    <input id="info" type="text" placeholder="Oppdater info" onchange="model.inputs.updateDog.info=this.value">
+    <button onclick="addInfo()">Oppdater hund</button>
     `
     return html
 }
@@ -36,3 +37,8 @@ function goToOwner() {
 }
 
 // Må legge in beskrivelse i modellen for ${dog.desc} */
+
+function addInfo() {
+    dog.info = model.inputs.updateDog.info
+    model.inputs.updateDog.info = ''
+}

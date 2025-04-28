@@ -35,8 +35,7 @@ inputs: {
         layout: 'list',
     },
    
-    createUser: {
-        
+    createUser: {    
         password: '',
         email: '',
         firstName: '',
@@ -57,13 +56,21 @@ inputs: {
     },
 
     newDog: {
-    owner: null,
-    name: '',
-    image: '',
-    rase: '',
-    size: '',
-    age: '',
-    favoriteFood: '', info: '',
+        owner: null,
+        name: '',
+        image: '',
+        rase: '',
+        size: '',
+        age: '',
+        favoriteFood: '',
+        info: '',
+    },
+
+    updateDog: {
+        size: '',
+        age: '',
+        favoriteFood: '',
+        info: '',
     },
 
     myProfile: {
@@ -113,7 +120,7 @@ data: {
         { id: 1, owner: 5, name: 'testnavn1', race: 'Chow-Chow', age: '5', size: '', favoriteFood: '', info: '', rating: 0, ratings: 52, picture: 'dogpictures/dog1.avif' },
         { id: 2, owner: 5, name: 'testnavn2', race: 'Border Collie', age: '7', size: 'Stor', favoriteFood: '', info: '', rating: 3, ratings: 34, picture: 'dogpictures/dog2.avif' },
         { id: 3, owner: 5, name: 'Luna', race: 'Mops', age: '4', size: 'Liten', favoriteFood: 'Pølse', info: '', rating: 3.5, ratings: 41, picture: 'dogpictures/dog3.avif' },
-        { id: 4, owner: 1, name: 'Aiko', race: 'Sibirsk Husky', age: '6', size: 'Stor', favoriteFood: 'Griseøre', info: '', rating: 5, ratings: 28, picture: 'dogpictures/dog4.avif' },
+        { id: 4, owner: 1, name: 'Aiko', race: 'Sibirsk Husky', age: '6', size: 'Stor', favoriteFood: 'Griseøre', info: 'Liker å kose', rating: 5, ratings: 28, picture: 'dogpictures/dog4.avif' },
         { id: 5, owner: 1, name: 'testnavn5', race: 'Welsh Corgi Pembroke', age: '3', size: 'Liten', favoriteFood: '', info: '', rating: 4.5, ratings: 33, picture: 'dogpictures/dog5.avif' },
         { id: 6, owner: 1, name: 'testnavn6', race: 'Australian Shepherd', age: '5', size: 'Stor', favoriteFood: '', info: '', rating: 4, ratings: 52, picture: 'dogpictures/dog6.avif' },
         { id: 7, owner: 1, name: 'testnavn7', race: 'Amerikansk Staffordshire Terrier', age: '5', size: 'Stor', favoriteFood: '', info: '', rating: 3, ratings: 34, picture: 'dogpictures/dog7.avif' },
