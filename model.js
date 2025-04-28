@@ -3,7 +3,7 @@ const app = document.getElementById('app')
 const model = {
 
 app:{
-    currentUserId: 1,
+    currentUserId: null,
     currentPage: 'dashboard', // 
 
     page: [
