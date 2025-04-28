@@ -4,11 +4,11 @@ function header(){
   return/*HTML*/`
   <div id= "topLeft"> 
   <button class="nav" onclick= "changePage('dashboard')">Forside</button> 
-  <button class="nav" onclick= "changePage('ratingPage')">Dog Rating</button>
-  <button class="nav" onclick= "changePage('topLists')">Top Lists</button>
-  <button class="nav" onclick= "changePage('createPage')">Create Account</button>
+  <button class="nav" onclick= "changePage('ratingPage')">Rating</button>
+  <button class="nav" onclick= "changePage('topLists')">Topp Lister</button>
+  <button class="nav" onclick= "changePage('createPage')">Opprett Bruker</button>
   <button class="nav" id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
-  <button class="nav" onclick= "changePage('ownerPage')">Profil</button>
+  <button class="nav" onclick= "changePage('ownerPage')">Min Profil</button>
   <button class="nav loggAv"onclick= "changePage('')">Logg Av</button>
 
 
