@@ -59,12 +59,12 @@ function displayDogs(owner) {
   }
 
   for(let i = 0; i < dogList.length; i++) {
-    let dog = dogList[i];
+    // let dog = dogList[i]; Never used
     html+=/*html*/`
     <div style="text-align: center; margin-bottom: 20px;">
-      <button onclick="viewDog('${dogList[i].id}')" class="viewDogBtn">${dogList[i].name}</button>
+      <button onclick="changeCurrentDog('${dogList[i].id}')" class="viewDogBtn">${dogList[i].name}</button>
       <br>
-      <img src="${dogList[i].picture}" style="width: 200px; border-radius: 10px;">
+      <img src="${dogList[i].picture}" onclick="changeCurrentDog('${dogList[i].id}')" style="width: 200px; border-radius: 10px;">
       <br>
       <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn">Slett</button>
     </div>

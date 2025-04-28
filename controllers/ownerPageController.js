@@ -71,10 +71,10 @@ function deleteDog(dogId) {
     updateview();
 }
 
-// Viser detaljer for en bestemt hund
-function viewDog(id) {
-    const dog = model.data.dogs.find(d => d.id == id);
-    if (!dog) return alert('Hund ikke funnet.');
-
-    alert(`Du ser på hunden ${dog.name}`);
-}
+// Viser detaljer for en bestemt hund --- Trengs ikke?
+//function viewDog(id) {
+//    const dog = model.data.dogs.find(d => d.id == id);
+//    if (!dog) return alert('Hund ikke funnet.');
+//
+//    alert(`Du ser på hunden ${dog.name}`);
+//}
