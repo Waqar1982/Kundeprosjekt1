@@ -10,8 +10,7 @@ body.dark-mode {
 }
 
 body.dark-mode #loginBox, 
-body.dark-mode #todaysDog, 
-body.dark-mode #top5Dogs, 
+
 body.dark-mode #newsBox {
     background-color: #1e1e1e;
     border-color: #444;

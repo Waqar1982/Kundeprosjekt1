@@ -28,7 +28,7 @@ function ownerPageView() {
     <!-- Legg til ny hund -->
           
     <!-- Skjema for å legge til ny hund (skjult som standard) -->
-    <div  style= "background: white; padding 200px; border-radius: 10px; margin-top: 20px;">
+    <div>
       ${showAddDogForm(currentUser.userID)}
     </div>
 
@@ -74,7 +74,7 @@ function displayDogs(owner) {
 
 function showAddDogForm(id) {
   const formHtml = /*html*/ `
-  <div  style= "background: white; padding: 20px; border-radius: 10px;">
+  <div>
     <h2>Legg til en ny hund</h2>
     
     <input type="text" onchange="model.inputs.newDog.name=this.value" placeholder="Hundens navn" style="padding: 5px; margin-bottom: 10px;">
