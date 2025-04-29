@@ -38,7 +38,7 @@ let html = ""
             ${printStars(dogID)} <br> <br>
             </div>
             ` 
-        } else {
+        } else if(model.data.topLists[type].length>number){
             model.data.topLists[type].splice(i,1)
             i--
         }
