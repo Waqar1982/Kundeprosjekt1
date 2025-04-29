@@ -1,13 +1,10 @@
 function ownerPageView() {
   const currentUser = model.data.users.find(user=>user.userID==model.inputs.ownerID);
-  //app.currentUserId TESTING
-  let html =""
 
+  let html =""
   html += /*html*/ `
 
   <div style="position: relative; text-align: center; font-family: Helvetica, sans-serif; padding: 20px;">
-
-     
 
     <!-- PROFIL -->
     <!-- <div style="display: flex; justify-content: flex-end; padding-right: 20px; margin-bottom: 20px;">
@@ -17,35 +14,37 @@ function ownerPageView() {
       </button>
       // Endre på h1 senere/fjerne?
        <h1>Velkommen ${currentUser.firstName} </h1> -->
-    </div>
+  </div>
  
-
-   <!-- HOVEDINNHOLD -->
-    <div>
-      <h1>Min Hundeside</h1>
-      <textarea class="userBio" placeholder="${currentUser.bio}" rows="3"></textarea>
-    </div>
-
-    <!-- Legg til ny hund -->
+    <!-- HOVEDINNHOLD -->
+  <div>
+    <h1>Min Hundeside</h1>
+    <textarea class="userBio" placeholder="${currentUser.bio}" rows="3"></textarea>
+  </div>
+  `
+    //<!-- Legg til ny hund -->
           
-    <!-- Skjema for å legge til ny hund (skjult som standard) -->
+    //<!-- Skjema for å legge til ny hund (skjult som standard) -->
+  
+  if(model.app.currentUserId == model.inputs.ownerID) {
+    html += /*html*/`
     <div>
-      ${showAddDogForm(currentUser.userID)}
+    ${showAddDogForm(currentUser.userID)}
     </div>
+    `
+  }
 
-    <!-- Viser lagrede hunder -->
-    <div class="savedDogs">
-      ${displayDogs(currentUser)}
-    </div>
-
-  </div>  
-    
+    //<!-- Viser lagrede hunder -->
+  html += /*html*/ `
+  <div class="savedDogs">
+    ${displayDogs(currentUser)}
+  </div>
   `;
 
   return html
 }
 
- // Lage function for lagre bio
+// Lage function for lagre bio
 
 function displayDogs(owner) {
   let html = "";
