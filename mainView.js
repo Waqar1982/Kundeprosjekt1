@@ -13,7 +13,7 @@ function header() {
     <button class="nav" onclick="changePage('topLists')">Topp Lister</button>
     <button class="nav" onclick="changePage('createPage')">Opprett Bruker</button>
     <button class="nav" id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
-    ${isLoggedIn ? `<button class="nav" onclick="changePage('ownerPage')">Min Profil</button>` : ""}
+    ${isLoggedIn ? `<button class="nav" onclick="changeCurrentOwner()">Min Profil</button>` : ""}
     ${isLoggedIn ? `<button class="nav loggAv" onclick="logout()">Logg Av</button>` : ""}
   </div>
   ${loginBoxHTML}
@@ -54,6 +54,11 @@ function chosenview() {
 function changePage(newPage) {
   model.app.currentPage = newPage;
   updateview();
+}
+
+function changeCurrentOwner() {
+  model.inputs.ownerID = model.app.currentUserId
+  changePage('ownerPage')
 }
 
 function changeCurrentDog(newDogID) {
