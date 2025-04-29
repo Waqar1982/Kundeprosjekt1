@@ -17,9 +17,9 @@ function dogRating() {
     html += /*html*/ `
     
     <h2>${dog.name}<h2>
-    <button onclick="changeRatingDog(dogID-1)"style="cursor: pointer;">Tilbake</button>
+    <button onclick="changeRatingDog(dogID, 'down')"style="cursor: pointer;">Tilbake</button>
     <img src=${dog.picture}>
-    <button onclick="changeRatingDog(dogID+1)"style="cursor: pointer;">Gå til neste</button>
+    <button onclick="changeRatingDog(dogID, 'up')"style="cursor: pointer;">Gå til neste</button>
     <div id="stars">${stars}</div>
     
     <h2>Rase: ${dog.race}<h2>

@@ -66,11 +66,29 @@ function changeCurrentDog(newDogID) {
   changePage("dogPage");
 }
 
-function changeRatingDog(newDogID) {
-  if (newDogID < model.data.dogs.length + 1 && newDogID > 0) {
-    model.inputs.ratingDogID = newDogID;
+function changeRatingDog(dogID, direction) {
+  if(direction == 'down') {
+    dogID--
+    if(model.data.dogs.find(element=>element.id==dogID)) {
+      model.inputs.ratingDogID = dogID;
+      changePage("ratingPage");
+    } else if (dogID>0) {
+      changeRatingDog(dogID, 'down')
+    } else {
+      return
+    }
   }
-  changePage("ratingPage");
+  if(direction == 'up') {
+    dogID++
+    if(model.data.dogs.find(element=>element.id==dogID)) {
+      model.inputs.ratingDogID = dogID;
+      changePage("ratingPage");
+    } else if(dogID < model.data.dogs.length + 1) {
+      changeRatingDog(dogID, 'up')
+    } else {
+      return
+    }
+  }
 }
 
 function profileButton() {
