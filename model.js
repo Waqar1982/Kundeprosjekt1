@@ -143,7 +143,7 @@ data: {
         shiba: [],
         labrador: [],
         mix: [],
-        adopted: []
+        adopted: [9, 13, 14, 15, 16]
     },
     /* topLists: [{
         listID: 1,

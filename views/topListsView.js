@@ -2,7 +2,6 @@ function topListsView() {
     let html =""
     html += /*html*/ `
 
-    
     <h1>Topp 10 Hunder</h1>
     <div id='all' class="topList">${fillTopList('all', 10)}</div>
     
@@ -11,6 +10,9 @@ function topListsView() {
     
     <h1>Topp 5 Store Hunder</h1>
     <div id='big' class="topList">${fillTopList('big', 5)}</div>
+
+    <h1>Topp 5 Adopterte Hunder</h1>
+    <div id='adopted' class="topList">${fillTopList('adopted', 5)}</div>
 
     `  
     return html
