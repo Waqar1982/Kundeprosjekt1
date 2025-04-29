@@ -29,14 +29,19 @@ let html = ""
     for(i=0; i<number; i++) {
         let dogID = model.data.topLists[type][i]
         console.log(dogID)
-        const dog = model.data.dogs.find(element => element.id == dogID)
-        html += `
-        <div class="dogInList">
+        if(model.data.dogs.find(element => element.id == dogID)) {
+            const dog = model.data.dogs.find(element => element.id == dogID)
+            html += `
+            <div class="dogInList">
             ${dog.name} <br>
             <img src=${dog.picture} onclick="changeCurrentDog(${dogID})"> <br>
             ${printStars(dogID)} <br> <br>
-        </div>
-        ` 
+            </div>
+            ` 
+        } else {
+            model.data.topLists[type].splice(i,1)
+            i--
+        }
     }
     return html
 }
