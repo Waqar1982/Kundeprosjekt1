@@ -2,6 +2,7 @@ body {
     font-family: arial, sans-serif;
     text-align: center;
     padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -50,7 +51,7 @@ body.dark-mode #newsBox {
 #todaysDog {
     position: absolute;
     bottom: 10px;
-    right: 5px;
+    right: -100px;
     width: 450px;
 }
 
