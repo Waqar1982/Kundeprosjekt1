@@ -2,7 +2,6 @@ body {
     font-family: arial, sans-serif;
     text-align: center;
     padding-top: 80px;
-    overflow-x: hidden;
 }
 
 body.dark-mode {
