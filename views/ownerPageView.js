@@ -65,10 +65,15 @@ function displayDogs(owner) {
       <button onclick="changeCurrentDog('${dogList[i].id}')" class="viewDogBtn">${dogList[i].name}</button>
       <br>
       <img src="${dogList[i].picture}" onclick="changeCurrentDog('${dogList[i].id}')" style="width: 200px; border-radius: 10px;">
+    `
+    if(model.app.currentUserId == model.inputs.ownerID){
+      html += /*html*/
+      `
       <br>
       <button onclick="deleteDog('${dogList[i].id}')" class="viewDogBtn">Slett</button>
-    </div>
-    `;
+      `
+    }
+    html += `</div>`
   }
   return html;
 }
