@@ -2,7 +2,7 @@ updateview();
 
 function header() {
   const isLoggedIn = model.app.currentUserId != null;
-
+  const adminLoggedIn = model.app.currentUserId === 1
   let profileButtonHTML = isLoggedIn ? profileButton() : "";
   let loginBoxHTML = isLoggedIn ? "" : logInBox();
 
@@ -11,7 +11,7 @@ function header() {
     <button class="nav" onclick="changePage('dashboard')">Forside</button> 
     <button class="nav" onclick="changePage('ratingPage')">Rating</button>
     <button class="nav" onclick="changePage('topLists')">Topp Lister</button>
-    <button class="nav" onclick="changePage('createPage')">Opprett Bruker</button>
+    ${!adminLoggedIn ? `<button class="nav" onclick="changePage('createPage')">Opprett Bruker</button>` : ""}
     <button class="nav" id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
     ${isLoggedIn ? `<button class="nav" onclick="changeCurrentOwner()">Min Profil</button>` : ""}
     ${isLoggedIn ? `<button class="nav loggAv" onclick="logout()">Logg Av</button>` : ""}
