@@ -38,7 +38,7 @@ function printDogs (){
         <img src="${dogi.picture}" onclick="changeCurrentDog(${dogi.id})" alt="Hundebilde" 
         style="position: absolute; top: ${top1}px; left: 0px; height: 150px;">
         <div class="stars" style="position: absolute; top: ${top2}px; left: 23px; color: gold;">
-        ${printStars(dogi.id)}
+        ${printStarsDisplay(dogi.id)}
         </div>
         </div>
         `

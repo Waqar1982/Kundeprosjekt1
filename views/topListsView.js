@@ -35,7 +35,7 @@ let html = ""
             <div class="dogInList">
             ${dog.name} <br>
             <img src=${dog.picture} onclick="changeCurrentDog(${dogID})"> <br>
-            ${printStars(dogID)} <br> <br>
+            ${printStarsDisplay(dogID)} <br> <br>
             </div>
             ` 
         } else if(model.data.topLists[type].length>number){
