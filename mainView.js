@@ -89,10 +89,7 @@ function logout() {
 }
 
 function logInBox() {
-  return /*HTML*/ `
-  <div id="loginBox">
-  </div>
-  `;
+  return ""
 }
 
 
