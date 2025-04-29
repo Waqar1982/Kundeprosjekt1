@@ -4,23 +4,6 @@ function registerUser(firstName, lastName, email, phone) {
     const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
     const isValidPhone = (phone) => /^\d+$/.test(phone);
 
-    if (!isValidName(firstName)) {
-        alert("Fornavn skal kun inneholde bokstaver.");
-        return;
-    }
-    if (!isValidName(lastName)) {
-        alert("Etternavn skal kun inneholde bokstaver.");
-        return;
-    }
-    if (!isValidEmail(email)) {
-        alert("Ikke gyldig e-postadresse. E-Post må inneholde '@' og domene.");
-        return;
-    }
-   // if (!isValidPhone(phone)) {
-    //    alert("Telefonnummer må kun inneholde tall.");
-     //   return;
-    //}
-
     const newUser = {
         userID: model.data.users.length + 1,
         adminUser: false,
