@@ -4,11 +4,11 @@
 
 
 
-function saveBio(newBio) {
-    model.data.users.bio = newBio;
+// function saveBio(newBio) {
+//     model.data.users.bio = newBio;
     // const bioText = document.getElementById('bioOwner').value;
     // localStorage.setItem('bio', bioText);
-}
+// }
 // function saveDogName(newName, newImage, newRase, newSize, newAge, newFavoriteFood) {
 // model.inputs.newDog.name = newName;
 // model.inputs.newDog.image = newImage;
