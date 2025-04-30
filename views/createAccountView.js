@@ -15,7 +15,7 @@ function createAccountView() {
     <input type="text" id="password" placeholder="Passord" style= "width: 20%;" onchange="model.inputs.createUser.password=this.value">
     <input type="text" id="phone" placeholder="Telefonnummer" style= "width: 20%;" onchange="model.inputs.createUser.number=this.value">
    
-    <button onclick="handleUserRegistration()" style= "width: 20%; background: green;">Registrer</button>
+    <button onclick="handleUserRegistration()" style= "width: 20%; background: green; color: white ">Registrer</button>
     </div> 
     `;
     return html
