@@ -63,7 +63,7 @@ body.dark-mode #newsBox {
 #newsBox {
     position: absolute;
     top: 400px;
-    left: 50%;
+    left: 40%;
     transform: translateX(-30%);
     cursor: pointer;
 }
