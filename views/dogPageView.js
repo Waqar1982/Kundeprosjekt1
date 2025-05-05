@@ -9,7 +9,7 @@ function dogPageView() {   //ta inn input her senere
     <h2>${dog.name}</h2>
     <div class='row'>
         <div class='column1'>
-            <img src=${dog.picture} alt="Aikos profil bilde" style="width: 400px; height: 400px;">
+            <img src=${dog.picture} alt="${dog.name}s profilbilde" style="width: 400px; height: 400px;">
             ${printStars(dog.id)}
         </div>
         <div class='column2'>

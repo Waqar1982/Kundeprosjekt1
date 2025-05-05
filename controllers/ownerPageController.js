@@ -7,14 +7,15 @@ function addDog(ownerId) {
     const newDog = {
         id: Math.floor(Math.random()*model.data.dogs.length+100-ownerId),
         owner: model.app.currentUserId,
-        name: model.inputs.newDog.name, 
-        race: model.inputs.newDog.rase, 
-        age: model.inputs.newDog.age, 
-        size: model.inputs.newDog.size, 
-        favoriteFood: model.inputs.newDog.favoriteFood, 
-        rating: 0, 
-        ratings: 0, 
-        picture: model.inputs.newDog.image, 
+        name: model.inputs.newDog.name,
+        race: model.inputs.newDog.race,
+        age: model.inputs.newDog.age,
+        size: model.inputs.newDog.size,
+        favoriteFood: model.inputs.newDog.favoriteFood,
+        rating: 0,
+        ratings: 0,
+        info: '',
+        picture: model.inputs.newDog.image,
     }
     console.log(newDog);
     let user = model.data.users.find(user=>user.userID==ownerId)

@@ -14,7 +14,7 @@ function registerUser(firstName, lastName, email, phone) {
         phone: phone,
         profilePicture: '',
         dogList: [],
-        info: 'Ny bruker',
+        bio: 'Ny bruker',
         dogRatings: [],
     };
 

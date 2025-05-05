@@ -59,7 +59,7 @@ inputs: {
         owner: null,
         name: '',
         image: '',
-        rase: '',
+        race: '',
         size: '',
         age: '',
         favoriteFood: '',

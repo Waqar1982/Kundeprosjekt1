@@ -84,7 +84,7 @@ function showAddDogForm(id) {
     
     <input class="addDogForm" type="text" onchange="model.inputs.newDog.name=this.value" placeholder="Hundens navn">
     <input class="addDogForm" type="text" onchange="model.inputs.newDog.image=this.value" placeholder="Bilde-URL">
-    <input class="addDogForm" type="text" onchange="smodel.inputs.newDog.rase=this.value" placeholder="Rase">
+    <input class="addDogForm" type="text" onchange="model.inputs.newDog.race=this.value" placeholder="Rase">
     <input class="addDogForm" type="text" onchange="model.inputs.newDog.size=this.value" placeholder="Størrelse">
     <input class="addDogForm" type="text" onchange="model.inputs.newDog.age=this.value" placeholder="Alder">
     <input class="addDogForm" type="text" onchange="model.inputs.newDog.favoriteFood=this.value" placeholder="Favorittmat">
