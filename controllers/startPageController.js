@@ -75,7 +75,8 @@ function validatePassword(username, password) {
 }
 
 function createAccount() {
-    createAccountView();
+    model.app.currentPage = 'createPage';
+    app.innerHTML = createAccountView();
 }
 
 function ratingSite() {
