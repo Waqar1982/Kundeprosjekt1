@@ -5,7 +5,8 @@ function saveDogs() {
 
 function addDog(ownerId) {
     const newDog = {
-        id: Math.floor(Math.random()*model.data.dogs.length+100-ownerId), 
+        id: Math.floor(Math.random()*model.data.dogs.length+100-ownerId),
+        owner: model.app.currentUserId,
         name: model.inputs.newDog.name, 
         race: model.inputs.newDog.rase, 
         age: model.inputs.newDog.age, 
