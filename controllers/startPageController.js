@@ -26,11 +26,6 @@ function logIn() {
         password.classList.add('input-error'); // Legg til rød kant på passord
         //return;
     }
-    /*if (!isValidUser(username.value,)) {
-       username.classList.add('input-error'); // Legg til rød kant på brukernavn
-       password.classList.add('input-error'); // Legg til rød kant passord
-       return;
-    }*/
 else if (findUser && findPassword) {
     console.log("kjørerelse")
     for(let i = 0; i< model.data.users.length; i++){
@@ -42,14 +37,7 @@ else if (findUser && findPassword) {
         }
     }
 }
-   
-    // Redirect to dashboard view
-   
 
-
-
-    //const user = model.data.users.find(element => element.userID == model.app.currentUserId);
-    //user.fistName
 }
 
 function validateEmail(email) {
@@ -58,15 +46,11 @@ function validateEmail(email) {
 }
 
 function isValidUser(username) {
-    // Dummy implementation for checking if user exists in the system
-    // Replace this with actual logic to check user existence
     const users = ['user1@example.com', 'user2@example.com'];
     return users.includes(username);
 }
 
 function validatePassword(username, password) {
-    // Dummy implementation for password validation
-    // Replace this with actual logic to validate password
     const validCredentials = {
         'user1@example.com': 'password123',
         'user2@example.com': 'password456'

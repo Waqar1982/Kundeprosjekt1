@@ -145,27 +145,6 @@ data: {
         mix: [],
         adopted: [9, 13, 14, 15, 16]
     },
-    /* topLists: [{
-        listID: 1,
-        owner: 5, name: 'all',
-        topList: [],
-    },{
-        listID: 2,
-        owner: 5, name: 'small',
-        topList: [3, 5, 10, 11, 12],
-    },{
-        listID: 3,
-        owner: 5, name: 'big',
-        topList: [],
-    },{
-        listID: 4,
-        owner: 5, name: 'shiba',
-        topList: [],
-    },{
-        listID: 5,
-        owner: 5, name: 'labrador',
-        topList: [],
-    },], */
 
     news: ["Denne ukas hunderase er: Shiba Inu.", "Intervju med eieren av dagens hund: Simba.",
         "Se hunder oppe til adopsjon nær deg.", "Vi har fått 4 nye medlemer den siste uken!","7 hunder har bursdag i dag: De er ______"],

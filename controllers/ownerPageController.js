@@ -1,38 +1,7 @@
-// Initialiserer hundelisten hvis den ikke finnes fra før 
-// *HUSK Å ENDRE*
-// Lagrer og henter bio fra localStorage
 
-
-
-// function saveBio(newBio) {
-//     model.data.users.bio = newBio;
-    // const bioText = document.getElementById('bioOwner').value;
-    // localStorage.setItem('bio', bioText);
-// }
-// function saveDogName(newName, newImage, newRase, newSize, newAge, newFavoriteFood) {
-// model.inputs.newDog.name = newName;
-// model.inputs.newDog.image = newImage;
-// model.inputs.newDog.rase = newRase;
-// model.app.inputs.newDog.size = newSize;
-// model.app.inputs.newDog.age = newAge;
-// model.app.inputs.newDog.favoriteFood = newFavoriteFood;
-// }
-
-// Lagrer og henter hunder fra localStorage
 function saveDogs() {
-    
-    // localStorage.setItem('dogs', JSON.stringify(dogs));
 }
 
-
-// Viser skjemaet for å legge til ny hund
-
-
-// Skjuler skjemaet for å legge til ny hund
-// function closeAddDogForm() {
-//     const form = document.getElementById('addDogForm');
-//     if (form) form.style.display = 'none';
-// }
 
 function addDog(ownerId) {
     const newDog = {
@@ -70,11 +39,3 @@ function deleteDog(dogId) {
     }
     updateview();
 }
-
-// Viser detaljer for en bestemt hund --- Trengs ikke?
-//function viewDog(id) {
-//    const dog = model.data.dogs.find(d => d.id == id);
-//    if (!dog) return alert('Hund ikke funnet.');
-//
-//    alert(`Du ser på hunden ${dog.name}`);
-//}
