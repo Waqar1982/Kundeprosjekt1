@@ -2,7 +2,6 @@
 function saveDogs() {
 }
 
-
 function addDog(ownerId) {
     const newDog = {
         id: Math.floor(Math.random()*model.data.dogs.length+100-ownerId),

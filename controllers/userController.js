@@ -35,9 +35,9 @@ function getUserById(userId) {
     return model.data.users.find((user) => user.userID === userId);
 }
 function clearCreateUserInput (){
-model.inputs.createUser.password = '';
-model.inputs.createUser.email = '';
-model.inputs.createUser.firstName = '';
-model.inputs.createUser.lastName = '';
-model.inputs.createUser.number = '';
+    model.inputs.createUser.password = '';
+    model.inputs.createUser.email = '';
+    model.inputs.createUser.firstName = '';
+    model.inputs.createUser.lastName = '';
+    model.inputs.createUser.number = '';
 }

@@ -24,8 +24,6 @@ function dogRating() {
     return html
 }
 
-
-
 function updateDogRatingViewStars() {
     document.getElementById('stars').innerHTML = printStars(model.inputs.currentDogID);
 }
