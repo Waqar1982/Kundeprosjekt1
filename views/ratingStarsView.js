@@ -47,19 +47,17 @@ function printStarsDisplay (id) {
     
     for (let i =0; i<maxStars; i++){
         console.log (ratingNumber)
-    if(i<ratingNumber){
-        console.log (i<ratingNumber)
-        html+= /*HTML*/`
-        <span  class="star gold" data-value="1">&#9733</span>
-    
-        `
-    } else {
-        console.log('kjøre')
-        html+= /*HTML*/`
-        <span  class="star" data-value="1">&#9733</span>
-    
-         `
-    }
+        if(i<ratingNumber){
+            console.log (i<ratingNumber)
+            html+= /*HTML*/`
+            <span  class="star gold" data-value="1">&#9733</span>
+            `
+        } else {
+            console.log('kjøre')
+            html+= /*HTML*/`
+            <span  class="star" data-value="1">&#9733</span>
+            `
+        }
     }
     return `<div class="rating">${html}</div>`
-    }
+}
